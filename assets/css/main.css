@@ -21,7 +21,7 @@ body {
    ========================================================================== */
 
 body {
-    background-color: black;
+    background-color: #fff;
 }
 
 
@@ -29,8 +29,34 @@ body {
    Navigation 
    ========================================================================== */
 
-nav {
+.ownit__navbar {
     background-color: transparent !important;
+    z-index: 3;
+}
+
+.ownit__navbar--anchor,
+.ownit__navbar--anchor:active {
+    color: #fff !important;
+    text-transform: uppercase;
+}
+
+.ownit__navbar button {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: #fff !important;
+}
+
+.ownit__navbar button:focus,
+.ownit__navbar button:active,
+{
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: #fff !important;
+}
+
+.ownit__navbar--text,
+.ownit__navbar--hr {
+    visibility: hidden;
 }
 
 
@@ -39,9 +65,26 @@ nav {
    ========================================================================== */
 
 .banner {
-    height: 100% !important;
+    z-index: 2;
+    margin-top: -100px;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.banner--backdrop {
+    position: absolute;
+    top: 0;
+    background: #000;
+    margin-top: -100px;
+    height: 100vh !important;
+}
+
+.carousel-inner {
+    z-index: -1;
+    height: 100%;
 }
 
 .carousel-item img {
-    max-height: 100vh !important;
+    height: 100vh !important;
+    width: 100vw !important;
 }
