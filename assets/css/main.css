@@ -30,33 +30,34 @@ body {
    Navigation 
    ========================================================================== */
 
-.ownit__navbar {
+.bosscoop__navbar {
     background-color: transparent !important;
     z-index: 3;
+    padding-top: 10px;
 }
 
-.ownit__navbar--anchor,
-.ownit__navbar--anchor:active {
+.bosscoop__navbar--anchor,
+.bosscoop__navbar--anchor:active {
     color: #fff !important;
     text-transform: uppercase;
 }
 
-.ownit__navbar button {
+.bosscoop__navbar button {
     background-color: transparent !important;
     border-color: transparent !important;
     color: #fff !important;
 }
 
-.ownit__navbar button:focus,
-.ownit__navbar button:active,
+.bosscoop__navbar button:focus,
+.bosscoop__navbar button:active,
 {
     background-color: transparent !important;
     border-color: transparent !important;
     color: #fff !important;
 }
 
-.ownit__navbar--text,
-.ownit__navbar--hr {
+.bosscoop__navbar--text,
+.bosscoop__navbar--hr {
     visibility: hidden;
 }
 
@@ -88,6 +89,26 @@ body {
 .carousel-item img {
     height: 100vh !important;
     width: 100vw !important;
+}
+
+
+/* .carousel-indicators li {
+    position: relative;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    /* background-color: rgba(133, 33, 83, .5); 
+
+
+}*/
+
+.carousel-indicators .active {
+    background-color: rgba(133, 33, 83, .9);
+    /* background-color: #fff; */
 }
 
 
@@ -222,6 +243,76 @@ body {
 }
 
 .services .card {
+    padding: 20px 0 10px;
     margin: 20px 0 0;
     border: none;
+}
+
+.services .card-img-top {
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+}
+
+.services .card-title {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.services .card-text {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+
+/* ==========================================================================
+ Products
+   ========================================================================== */
+
+
+/* ==========================================================================
+ Inquries
+   ========================================================================== */
+
+.inquires {
+    background-color: rgba(33, 131, 129, .05);
+    padding: 30px 0 20px;
+}
+
+.inquires__info div {
+    margin: 20px 0;
+    display: flex;
+}
+
+.inquires__info div h3 {
+    text-transform: capitalize;
+}
+
+.inquires__info img {
+    /* display: block;*/
+    margin: 0 15px;
+    width: 40px;
+    height: 40px;
+}
+
+
+/* ==========================================================================
+  Footer
+   ========================================================================== */
+
+footer {
+    background: rgba(131, 33, 83, .8);
+    padding: 20px 0 10px;
+}
+
+footer .row {
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    color: #fff;
+    font-weight: 400;
 }
