@@ -63,7 +63,7 @@ body {
 
 
 /* ==========================================================================
-   Banner
+   Carousel
    ========================================================================== */
 
 .banner {
@@ -291,6 +291,7 @@ body {
 .products .card {
     width: 50%;
     border: none;
+    /* margin: 0 5px 0; */
 }
 
 .products .card__two,
@@ -324,6 +325,7 @@ body {
 .btn-ownit:hover {
     background: #fff;
     color: #832153;
+    border: 1px solid #6a304e;
 }
 
 
@@ -334,6 +336,11 @@ body {
 .inquires {
     background-color: rgba(33, 131, 129, .05);
     padding: 30px 0 20px;
+}
+
+.inquires span {
+    border-left: 2px solid rgba(33, 131, 129, .2);
+    padding-left: 20px;
 }
 
 .inquires__info div {
@@ -347,7 +354,7 @@ body {
 
 .inquires__info img {
     /* display: block;*/
-    margin: 0 15px;
+    margin: 20px 15px 0;
     width: 40px;
     height: 40px;
 }
@@ -358,8 +365,8 @@ body {
    ========================================================================== */
 
 footer {
-    background: rgba(131, 33, 83, .8);
-    padding: 20px 0 10px;
+    background: rgba(131, 33, 83, .9);
+    padding: 10px 0 0;
 }
 
 footer .row {
@@ -370,4 +377,102 @@ footer .row {
 footer p {
     color: #fff;
     font-weight: 400;
+}
+
+@media screen and (max-width: 790px) {
+    /* ==========================================================================
+  Features
+   ========================================================================== */
+    .features__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        width: 50%
+    }
+    /* .features .card {
+        display: block;
+        margin: 20px 0 0;
+        border: none;
+    } */
+    .services {
+        padding: 20px 0 30px;
+        background-color: rgba(33, 131, 129, .05);
+        width: 100%;
+    }
+    .services__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .services .card {
+        padding: 10px 0 10px;
+        margin: 20px 20px 0;
+        border: none;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    /* ==========================================================================
+   Navigation 
+   ========================================================================== */
+    .bosscoop__navbar {
+        background-color: rgba(131, 33, 83, 1) !important;
+        ;
+        /* background-color: rgba(33, 131, 129, .5) !important; */
+        z-index: 3;
+        padding-top: 10px;
+    }
+    .bosscoop__navbar--anchor,
+    .bosscoop__navbar--anchor:active {
+        color: #fff !important;
+        text-transform: uppercase;
+    }
+    .bosscoop__navbar--text,
+    .bosscoop__navbar--hr {
+        color: #fff!important;
+        visibility: visible;
+        margin: 0 5px;
+    }
+    .navbar__div {
+        margin-left: 100px;
+    }
+    .navbar-nav {
+        margin-right: 100px;
+        color: #fff !important;
+    }
+    /* .bosscoop__navbar button {
+        background-color: transparent !important;
+        border-color: transparent !important;
+        color: #fff !important;
+        display: none;
+    } */
+    .navbar-nav li a {
+        color: #fff !important;
+    }
+    /* ==========================================================================
+   Carousel
+   ========================================================================== */
+    /* ==========================================================================
+  Features
+   ========================================================================== */
+    .features .card {
+        margin: 20px 0 0;
+        border: none;
+        width: 33.3333333% !important;
+    }
+    /* ==========================================================================
+  Vision
+   ========================================================================== */
+    /* ==========================================================================
+  Services
+   ========================================================================== */
+    .services .container {
+        width: 100%;
+    }
+    .services .card {
+        padding: 10px 0 10px;
+        margin: 20px 0 0;
+        border: none;
+    }
 }
