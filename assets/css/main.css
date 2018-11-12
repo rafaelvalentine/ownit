@@ -31,7 +31,7 @@ body {
    ========================================================================== */
 
 .bosscoop__navbar {
-    background-color: transparent !important;
+    background-color: rgba(255, 255, 255, 0) !important;
     z-index: 3;
     padding-top: 10px;
 }
@@ -91,21 +91,6 @@ body {
     width: 100vw !important;
 }
 
-
-/* .carousel-indicators li {
-    position: relative;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    width: 30px;
-    height: 3px;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    /* background-color: rgba(133, 33, 83, .5); 
-
-
-}*/
-
 .carousel-indicators .active {
     background-color: rgba(133, 33, 83, .9);
     /* background-color: #fff; */
@@ -136,6 +121,7 @@ body {
 .features .card {
     margin: 20px 0 0;
     border: none;
+    /* padding: 0 20px 0; */
 }
 
 .features .card-body {
@@ -147,15 +133,15 @@ body {
 .card-body__header {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    padding: 20px;
     margin-top: -20px;
     margin-left: -20px;
     margin-bottom: 10px;
 }
 
 .card-body__header img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 .card-body__header .card-title {
@@ -281,13 +267,6 @@ body {
     width: 7rem;
 }
 
-
-/* .products__row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-} */
-
 .products .card {
     width: 50%;
     border: none;
@@ -338,25 +317,30 @@ body {
     padding: 30px 0 20px;
 }
 
-.inquires span {
-    border-left: 2px solid rgba(33, 131, 129, .2);
-    padding-left: 20px;
-}
-
 .inquires__info div {
     margin: 20px 0;
     display: flex;
 }
 
-.inquires__info div h3 {
+.inquires span {
+    border-left: 2px solid rgba(33, 131, 129, .2);
+    padding-left: 20px;
+}
+
+.inquires__info div h5 {
     text-transform: capitalize;
+}
+
+.inquires__info div p {
+    font-weight: 400;
+    font-size: .8em;
 }
 
 .inquires__info img {
     /* display: block;*/
     margin: 20px 15px 0;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -377,11 +361,12 @@ footer .row {
 footer p {
     color: #fff;
     font-weight: 400;
+    font-size: .75em;
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (min-width: 600px) {
     /* ==========================================================================
-  Features
+        Features
    ========================================================================== */
     .features__container {
         display: flex;
@@ -390,11 +375,13 @@ footer p {
         padding: 10px;
         width: 50%
     }
-    /* .features .card {
-        display: block;
-        margin: 20px 0 0;
-        border: none;
-    } */
+    .card-body__header img {
+        width: 70px;
+        height: 70px;
+    }
+    /* ==========================================================================
+        Services
+   ========================================================================== */
     .services {
         padding: 20px 0 30px;
         background-color: rgba(33, 131, 129, .05);
@@ -410,16 +397,32 @@ footer p {
         margin: 20px 20px 0;
         border: none;
     }
+    /* ==========================================================================
+        Products
+   ========================================================================== */
+    .products .card-img-top {
+        width: 100%;
+        height: 100%;
+    }
+    /* ==========================================================================
+        Inquires
+   ========================================================================== */
+    .inquires__info {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .inquires__info div {
+        margin: 20px;
+        display: flex;
+    }
 }
 
 @media screen and (min-width: 800px) {
     /* ==========================================================================
-   Navigation 
+        Navigation 
    ========================================================================== */
     .bosscoop__navbar {
         background-color: rgba(131, 33, 83, 1) !important;
-        ;
-        /* background-color: rgba(33, 131, 129, .5) !important; */
         z-index: 3;
         padding-top: 10px;
     }
@@ -441,31 +444,48 @@ footer p {
         margin-right: 100px;
         color: #fff !important;
     }
-    /* .bosscoop__navbar button {
-        background-color: transparent !important;
-        border-color: transparent !important;
+    /* .navbar-nav li a {
         color: #fff !important;
-        display: none;
     } */
-    .navbar-nav li a {
+    .nav-link {
+        text-transform: capitalize;
         color: #fff !important;
+        margin: 0 10px;
+    }
+    .nav-link:hover {
+        text-transform: capitalize;
+        color: #6a304e !important;
+        background-color: #fff;
+        border-radius: 20px;
     }
     /* ==========================================================================
-   Carousel
-   ========================================================================== */
-    /* ==========================================================================
-  Features
+        Features
    ========================================================================== */
     .features .card {
         margin: 20px 0 0;
         border: none;
         width: 33.3333333% !important;
     }
+    .card-body__header img {
+        width: 75px;
+        height: 75px;
+    }
     /* ==========================================================================
-  Vision
+         Vision
    ========================================================================== */
+    .vision .row {
+        justify-content: space-between;
+    }
+    .vision .card {
+        width: 50%;
+    }
+    .vision .card-img-top {
+        width: 50%;
+        height: 100%;
+        margin: 10px auto 20px;
+    }
     /* ==========================================================================
-  Services
+        Services
    ========================================================================== */
     .services .container {
         width: 100%;
@@ -474,5 +494,40 @@ footer p {
         padding: 10px 0 10px;
         margin: 20px 0 0;
         border: none;
+    }
+    /* ==========================================================================
+        Products
+   ========================================================================== */
+    .products .row {
+        margin: 0 0 30px;
+    }
+    .products .card {
+        width: 50%;
+        border: none;
+        /* margin: 0 5px 0; */
+    }
+    .products .card-img-top {
+        width: 100%;
+        height: 100%;
+    }
+    .products .card__two,
+    .products .card__one {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        border: none;
+        margin: 0 0 20px;
+    }
+    /* ==========================================================================
+        Inquires
+   ========================================================================== */
+    .inquires__info {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 30px;
+    }
+    .inquires__info div {
+        margin-left: 50px;
+        display: flex;
     }
 }
