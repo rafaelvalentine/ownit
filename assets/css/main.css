@@ -327,7 +327,7 @@ body {
     padding-left: 20px;
 }
 
-.inquires__info div h5 {
+.inquires__info div span h5 {
     text-transform: capitalize;
 }
 
