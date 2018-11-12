@@ -525,80 +525,13 @@
 		-->
 
     <script src="assets/js/app.js "></script>
-    <script src=" assets/plugins/jquery.min.js "></script>
+    <script src="assets/plugins/jquery.min.js "></script>
     <script src="assets/plugins/popper.min.js "></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>
-        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            // document.getElementById("main").style.transform = "translateX(250px)";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-            document.body.style.overflow = 'hidden';
-        }
-
-        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            // document.getElementById("main").style.transform = "translateX(0)";
-            document.body.style.backgroundColor = "white";
-            document.body.style.overflow = 'visible';
-        }
-        $(function() {
-                $("li").on("click", function(e) { // See here, i have our selector set to "li", so this jQuery object will grab all li tags on the page
-                    $(this).addClass("here").siblings().removeClass("here");
-                });
-            })
-            // document.querySelector('#features').scrollIntoView({
-            //     behavior: 'smooth'
-            // });
-    </script>
-    <script>
-        // Select all links with hashes
-        $('a[href*="#"]')
-            // Remove links that don't actually link to anything
-            .not('[href="#"]')
-            .not('[href="#0"]')
-            .click(function(event) {
-                // On-page links
-                if (
-                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-                    location.hostname == this.hostname
-                ) {
-                    // Figure out element to scroll to
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    // Does a scroll target exist?
-                    if (target.length) {
-                        // Only prevent default if animation is actually gonna happen
-                        event.preventDefault();
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 1000, function() {
-                            // Callback after animation
-                            // Must change focus!
-                            var $target = $(target);
-                            $target.focus();
-                            if ($target.is(":focus")) { // Checking if the target was focused
-                                return false;
-                            } else {
-                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                                $target.focus(); // Set focus again
-                            };
-                        });
-                    }
-                }
-            });
-    </script>
-    <script>
-        $(function() {
-            $(document).scroll(function() {
-                var $nav = $(".bosscoop__navbar");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-            });
-        });
-    </script>
+    <script src="assets/js/sideNav.js"></script>
+    <script src="assets/js/smoothScroll.js"></script>
+    <script src="assets/js/navBarScroll.js"></script>
 </body>
 
 </html>

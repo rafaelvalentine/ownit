@@ -65,6 +65,7 @@ body {
 .bosscoop__navbar.scrolled {
     background-color: rgba(133, 33, 83, .9) !important;
     transition: background-color 200ms linear;
+    padding: 0;
 }
 
 
