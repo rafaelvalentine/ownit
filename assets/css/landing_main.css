@@ -1,0 +1,217 @@
+/* ==========================================================================
+	 General
+	========================================================================== 
+*/
+
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+body,
+#main {
+    padding: 0 !important;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 35px;
+    /* font-size: 26px;
+	font-weight: 300;
+	text-transform: uppercase; */
+    /* color: #5C5C5C; */
+}
+
+p,
+a {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-transform: none;
+    /* color: #34495E; */
+}
+
+
+/* ==========================================================================
+   Body 
+   ========================================================================== 
+*/
+
+body {
+    background-color: #fff;
+}
+
+.color {
+    color: #056340;
+    color: #fbae30;
+}
+
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== 
+*/
+
+.ownit_header button {
+    border: none;
+}
+
+.ownit_header button:focus {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("../img/menu.svg") !important;
+}
+
+.ownit_header .navbar-brand img {
+    width: 150px;
+    height: 50px;
+}
+
+
+/* ==========================================================================
+   Bannner
+   ========================================================================== 
+*/
+
+.banner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(22, 99, 5, .75);
+}
+
+.banner .jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 0;
+    /* background-color: #052763; */
+    /* background-color: rgba(5, 39, 99, .75); */
+    background-color: rgba(22, 99, 5, .2);
+    border-radius: .3rem;
+    /* color: #fff; */
+}
+
+
+/* .banner .jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #052763;
+    border-radius: .3rem;
+} */
+
+.banner .jumbotron h1 {
+    color: #fff;
+    font-weight: 700;
+}
+
+.banner .jumbotron p {
+    color: #fff;
+    font-weight: 400;
+}
+
+.banner .jumbotron .btn-primary {
+    color: #fff;
+    background-color: #fbae30;
+    border-color: #fbae30;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+.banner .jumbotron .btn-primary:active,
+.banner .jumbotron .btn-primary:hover {
+    color: #fbae30;
+    background-color: #fff;
+    border-color: #fbae30;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+.banner .card {
+    margin: 0;
+    background-color: rgba(5, 39, 99, .75);
+}
+
+
+/* ==========================================================================
+   Partners
+   ========================================================================== 
+*/
+
+.partners {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* .partners--container {
+    max-height: 50%;
+    width: 100%;
+} */
+
+.partners .carousel-item img {
+    width: 100%;
+    height: 80px;
+}
+
+
+/* ==========================================================================
+   Product
+   ========================================================================== 
+*/
+
+.products {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    background-color: rgba(5, 39, 99, .1);
+    /* background-color: rgba(22, 99, 5, .1); */
+}
+
+.products .row {
+    justify-content: center;
+    padding: 2rem 0 1rem;
+}
+
+.products .card {
+    margin: .5rem 0;
+    padding: 5rem 1rem;
+    border-radius: 10px;
+    width: 90% !important;
+}
+
+
+/* 
+.products .card img {
+    color: #fff;
+} */
+
+
+/* .products .card span {
+    background-image: url("../img/right-arrow.svg");
+} */
