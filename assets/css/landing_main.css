@@ -1,6 +1,7 @@
-/* ==========================================================================
+/* 
+==========================================================================
 	 General
-	========================================================================== 
+========================================================================== 
 */
 
 *,
@@ -26,10 +27,6 @@ h5 {
     font-style: normal;
     letter-spacing: normal;
     line-height: 35px;
-    /* font-size: 26px;
-	font-weight: 300;
-	text-transform: uppercase; */
-    /* color: #5C5C5C; */
 }
 
 p,
@@ -41,13 +38,13 @@ a {
     letter-spacing: normal;
     line-height: 24px;
     text-transform: none;
-    /* color: #34495E; */
 }
 
 
-/* ==========================================================================
+/* 
+==========================================================================
    Body 
-   ========================================================================== 
+========================================================================== 
 */
 
 body {
@@ -60,9 +57,10 @@ body {
 }
 
 
-/* ==========================================================================
+/* 
+==========================================================================
    Navigation
-   ========================================================================== 
+========================================================================== 
 */
 
 .ownit_header button {
@@ -98,19 +96,20 @@ body {
     color: #fbae30 !important;
 }
 
-.ownit_header .active {
+.ownit_header .navbar-nav .nav-item.activez a {
     color: #056340 !important;
 }
 
 
-/* ==========================================================================
+/* 
+==========================================================================
    Bannner
-   ========================================================================== 
+========================================================================== 
 */
 
 .banner {
     padding-bottom: 6rem;
-    background-color: rgba(22, 99, 5, 1)
+    background-color: rgba(22, 99, 5, 1);
 }
 
 .banner .banner--container {
@@ -123,20 +122,9 @@ body {
 .banner .jumbotron {
     padding: 2rem 1rem;
     margin-bottom: 0;
-    /* background-color: #052763; */
-    /* background-color: rgba(5, 39, 99, .75); */
     background-color: rgba(22, 99, 5, .2);
     border-radius: .3rem;
-    /* color: #fff; */
 }
-
-
-/* .banner .jumbotron {
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    background-color: #052763;
-    border-radius: .3rem;
-} */
 
 .banner .jumbotron h1 {
     color: #fff;
@@ -174,49 +162,40 @@ body {
     background-color: rgba(5, 39, 99, .75);
 }
 
-.banner .card .one {
-    visibility: visible;
-}
-
-.banner .card .two {
+.banner .card .two,
+.banner .card .three {
     display: none;
 }
 
 
-/* ==========================================================================
+/* 
+==========================================================================
    Partners
-   ========================================================================== 
+========================================================================== 
 */
 
 .partners {
-    background-color: #fff;
+    background-color: rgba(22, 99, 5, .1);
     display: flex;
     justify-content: center;
 }
 
-
-/* .partners--container {
-    max-height: 50%;
-    width: 100%;
-} */
-
 .partners .carousel-item img {
     width: 100%;
-    height: 100px;
+    height: 65px;
 }
 
 
-/* ==========================================================================
+/* 
+==========================================================================
    Product
-   ========================================================================== 
+========================================================================== 
 */
 
 .products {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     background-color: rgba(5, 39, 99, .2);
-    /* background-color: rgba(22, 99, 5, .1); */
 }
 
 .products .row {
@@ -283,9 +262,10 @@ body {
 }
 
 
-/* ==========================================================================
+/* 
+==========================================================================
   Modal
-   ========================================================================== 
+========================================================================== 
 */
 
 .modal .modal-title {
@@ -318,38 +298,27 @@ body {
 }
 
 
-/* ==========================================================================
+/* 
+==========================================================================
   Register
-   ========================================================================== 
+========================================================================== 
 */
 
 .register {
-    /* height: 100px; */
-    /* vertical-align: middle; */
     content: "";
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-image: url("../img/OWNiT.png");
-    background-repeat: no-repeat;
-    /* background-color: rgba(251, 174, 48, .9); */
-    /* background-color: rgba(5, 39, 99, .9); */
     background-position: right bottom;
-    /* background-attachment: fixed; */
 }
 
 .register .register--container {
     background-color: rgba( 31, 125, 91, .9);
-    /* background-color: rgba(251, 174, 48, .95); */
-    padding: 5rem 0;
+    padding: 5rem .5rem;
     color: #fff;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 
 .register .register--container h2 {
-    /* padding: 5rem 0 0;
-    margin: 5rem 0 3rem; */
     text-align: center;
     font-weight: 700;
 }
@@ -370,11 +339,312 @@ body {
 }
 
 
-/* ==========================================================================
+/* 
+==========================================================================
   Contact
-   ========================================================================== 
+========================================================================== 
 */
 
 .contact {
-    padding: 20px 0;
+    padding: 10px 0;
+    color: #566374;
+}
+
+.contact p {
+    font-weight: 400;
+    font: 14px !important;
+}
+
+.contact .contact__links--div,
+.contact .contact__info {
+    margin: 30px 0;
+}
+
+.contact .contact__links .nav-link {
+    margin: 0 10px;
+    text-transform: capitalize;
+    color: #566374 !important;
+}
+
+.contact__info--header {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.contact .contact__social--div h4,
+.contact .contact__links--div h4 {
+    margin-left: 10px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.contact .contact__social {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.facebook {
+    background-image: url("../img/facebook.svg") !important;
+}
+
+.facebook:hover {
+    background-image: url("../img/facebook-hover.svg") !important;
+}
+
+.instagram {
+    background-image: url("../img/instagram.svg") !important;
+}
+
+.instagram:hover {
+    background-image: url("../img/instagram-hover.svg") !important;
+}
+
+.twitter {
+    background-image: url("../img/twitter.svg") !important;
+}
+
+.twitter:hover {
+    background-image: url("../img/twitter-hover.svg") !important;
+}
+
+.linkedin {
+    background-image: url("../img/linkedin.svg") !important;
+}
+
+.linkedin:hover {
+    background-image: url("../img/linkedin-hover.svg") !important;
+}
+
+.contact__social .contact-toggler-icon {
+    margin: 0 10px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+
+
+/* 
+==========================================================================
+  Footer
+========================================================================== 
+*/
+
+footer {
+    border-top: .5px solid rgba(135, 150, 163, .4);
+    padding-top: 10px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 12px;
+    color: #566374;
+}
+
+@media screen and (min-width: 700px) and (max-width:1023px) {
+    /* 
+		==========================================================================
+   	Bannner
+  	========================================================================== 
+	*/
+    .banner .card .two {
+        display: inline;
+    }
+    .banner .card .one,
+    .banner .card .three {
+        display: none;
+    }
+    /* 
+		==========================================================================
+   	Partners
+	 ========================================================================== 
+	*/
+    .partners {
+        background-color: rgba(22, 99, 5, .1);
+        display: flex;
+        justify-content: center;
+    }
+    .partners .carousel-item img {
+        width: 100%;
+        height: 120px;
+    }
+    /* 
+		==========================================================================
+  	Products
+   	========================================================================== 
+	*/
+    .products .row {
+        flex-direction: row;
+        justify-content: center;
+        padding: 2rem 0 1rem;
+    }
+    .products .card {
+        margin: .5rem 10px;
+        padding: 2rem 0 2rem;
+        border-radius: 10px;
+        width: 30% !important;
+    }
+    #drive2OWN_actual button {
+        margin-top: 70px;
+    }
+    /* 
+		==========================================================================
+ 		 Contact
+		========================================================================== 
+		*/
+    .contact--container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly !important;
+    }
+    .contact .contact__links .nav-link {
+        margin: -10px 10px 0;
+        text-transform: capitalize;
+        color: #566374 !important;
+    }
+    .contact__info .address,
+    .contact__info .number {
+        display: block;
+    }
+    .contact__social--div {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* 
+		==========================================================================
+   	Navigation
+	 ========================================================================== 
+   */
+    .ownit_header .nav-item {
+        margin: 0 10px;
+    }
+    /* 
+		==========================================================================
+   	Bannner
+  	========================================================================== 
+	  */
+    .banner {
+        padding-bottom: 0;
+        background-color: rgba(22, 99, 5, 1);
+    }
+    .banner .banner--container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        background-color: rgba(22, 99, 5, .75);
+        /* height: 90vh; */
+    }
+    .banner .jumbotron {
+        align-self: center;
+        padding: 5rem;
+        margin-bottom: 0;
+        background-color: rgba(22, 99, 5, .2);
+        border-radius: .3rem;
+        margin-top: -100px;
+    }
+    .banner .card .three {
+        display: inline;
+        /* height: 100%;
+        width: 100%; */
+    }
+    .banner .card .one,
+    .banner .card .two {
+        display: none;
+    }
+    /* 
+		==========================================================================
+   	Partners
+  	========================================================================== 
+		*/
+    .partners {
+        background-color: rgba(22, 99, 5, .15);
+        display: flex;
+        justify-content: center;
+    }
+    .partners .carousel-item img {
+        width: 100%;
+        height: 150px;
+    }
+    /* 
+		==========================================================================
+  	Products
+   	========================================================================== 
+	  */
+    .products .row {
+        flex-direction: row;
+        justify-content: center;
+        padding: 2rem 0 1rem;
+    }
+    .products .card {
+        margin: .5rem 10px;
+        padding: 2rem 0 2rem;
+        border-radius: 10px;
+        width: 30% !important;
+    }
+    #drive2OWN_actual button {
+        margin-top: 70px;
+    }
+    /* 
+		==========================================================================
+  	Register
+		========================================================================== 
+		*/
+    .register {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-image: url("../img/OWNiT.png");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-attachment: fixed;
+    }
+    /* 
+		==========================================================================
+ 		 Contact
+		========================================================================== 
+		*/
+    .contact--container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between !important;
+    }
+    .contact .contact__links .nav-link {
+        margin: -10px 10px 0;
+        text-transform: capitalize;
+        color: #566374 !important;
+    }
+    .contact__info .address,
+    .contact__info .number {
+        display: block;
+    }
+    .contact__social--div {
+        margin-top: 25px;
+    }
+    /* 
+==========================================================================
+  Footer
+========================================================================== 
+*/
+    footer {
+        border-top: .5px solid rgba(135, 150, 163, .4);
+        padding-top: 13px;
+    }
+    footer .container {
+        display: flex;
+        justify-content: flex-start;
+    }
+    footer p {
+        font-size: 12px;
+        color: #566374;
+    }
 }
