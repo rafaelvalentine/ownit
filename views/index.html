@@ -17,10 +17,50 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/landing_main.css">
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script> -->
+    <!-- <style>
+        /* Paste this css to your style sheet file or under head tag */
+        /* This only works with JavaScript, 
+if it's not present, don't show loader */
+        
+        .no-js #loader {
+            display: none;
+        }
+        
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+        
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(".//assets/img/Preloader_2.gif") center no-repeat #fff;
+        }
+    </style> -->
+    <!-- <script>
+        //paste this code under the head tag or in a separate js file.
+        // Wait for window load
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
+		</script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <script src="assets/js/form-validation.js"></script>
 
 </head>
 
 <body id="home">
+    <div class="se-pre-con"></div>
 
     <!--
 	  ========================================================================== 
@@ -229,48 +269,59 @@
 												<span aria-hidden="true">&times;</span>
 										</button>
                 </div>
-                <div class="modal-body">
-                    <form>
+                <div id="loader"></div>
+                <div id="thanksModal" class="modal-body thanks-body">
+                    <img class='thanks-body__img' src="assets/img/checked.svg" alt="">
+                    <h4 class="text-center">Thank you for registering</h4>
+                    <p class="text-center">we'll contact you as soon as the project kicks off</p>
+                    <div class="modal-footer">
+                        <button id="closemodal" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+                <div class="modal-body form-body">
+                    <form id="ownItForm-main">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputFirstName">First Name</label>
-                                <input type="text" class="form-control" id="inputFirstName" placeholder="John">
+                                <input type="text" class="form-control" id="inputFirstName" name='firstname' placeholder="John">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputLastName">Last Name</label>
-                                <input type="text" class="form-control" id="inputLastName" placeholder="Doe">
+                                <input type="text" class="form-control" id="inputLastName" name='lastname' placeholder="Doe">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <label for="emailAddress">Email address</label>
-                                <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+                                <input type="email" name='email' class="form-control" id="emailAddress" placeholder="name@example.com">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputNumber">Mobile number</label>
-                                <input type="tel" class="form-control" id="inputNumber" placeholder="example: 08012345678">
+                                <input name='number' type="tel" class="form-control" id="inputNumber" placeholder="example: 08012345678">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputState">Product</label>
-                                <select id="inputState" class="form-control">
-															<option selected>--select--</option>
-															<option >Drive2OWN</option>
-															<option>Drive2EARN</option>
-														</select>
+                                <label for="inputProduct">Product</label>
+                                <select id="inputProduct" class="form-control" name='product'>
+																		<option selected></option>
+																		<option >Drive2OWN</option>
+																		<option>Drive2EARN</option>
+																</select>
                             </div>
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" data-target="#thanksModal">Save changes</button>
+                        </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!--
 	  ========================================================================== 
@@ -282,7 +333,7 @@
             <h2>
                 START TODAY, OWNIT
             </h2>
-            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#ownItForm" data-dismiss="modal">
+            <button id="openmodal" type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#ownItForm">
 							Register
 						</button>
         </div>
@@ -301,10 +352,10 @@
                         <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#drive2OWN_actual">drive 2 own</a>
+                        <a class="nav-link" href="#drive2OWN_actual">drive 2 OWN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#drive2EARN_actual">drive 2 earn</a>
+                        <a class="nav-link" href="#drive2EARN_actual">drive 2 EARN</a>
                     </li>
                 </ul>
             </div>
@@ -391,14 +442,17 @@
 		-->
 
     <script src="assets/js/app.js "></script>
-    <script src="assets/plugins/jquery.min.js "></script>
+
+    <!-- <script src="assets/plugins/jquery.min.js "></script> -->
     <script src="assets/plugins/popper.min.js "></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
     <script src="assets/js/smoothScroll.js"></script>
+
     <!-- <script src="assets/js/sideNav.js"></script>
     
-    <script src="assets/js/navBarScroll.js"></script> -->
+		<script src="assets/js/navBarScroll.js"></script> -->
+
 </body>
 
 </html>

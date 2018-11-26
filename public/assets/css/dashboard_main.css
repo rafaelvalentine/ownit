@@ -1,0 +1,25 @@
+#loader {
+    background: #056340 !important;
+}
+
+table tbody tr td,
+#table tbody th td {
+    text-transform: capitalize;
+    padding-right: 50px !important;
+}
+
+.dropdown {
+    visibility: hidden;
+}
+
+address {
+    text-transform: lowercase;
+}
+
+#body-main {
+    overflow-y: visible;
+}
+
+#body-main .btn-primary {
+    background: rgba(22, 99, 5, .9);
+}

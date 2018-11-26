@@ -1,0 +1,24 @@
+{
+  "name": "ownit",
+  "version": "1.0.0",
+  "description": "Landing Page for Ownit Africa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelvalentine/ownit.git"
+  },
+  "author": "Ezike, Ozichukwu Valentine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelvalentine/ownit/issues"
+  },
+  "homepage": "https://github.com/rafaelvalentine/ownit#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.12"
+  }
+}
