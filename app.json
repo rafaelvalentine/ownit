@@ -1,0 +1,8 @@
+{
+    "name": "OwnIt Africa ",
+    "description": "Website designed to help gather information on Potential users of the platform: Ownit",
+    "repository": "https://github.com/rafaelvalentine/ownit.git",
+    "logo": "./public/assets/img/OWNiT__logo.png",
+    "keywords": ["node", "express", "heroku"],
+    "image": "heroku/nodejs"
+}

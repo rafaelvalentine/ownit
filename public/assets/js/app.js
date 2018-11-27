@@ -75,6 +75,17 @@ $(document).ready(function() {
     $('#table').on('click', '.delete', function() {
         deleteUser($(this).closest('tr'))
     })
+
+    var loading = $('#loader').hide()
+    $(document)
+        .ajaxStart(function() {
+            let modal = $('.form-body')
+            modal.css('display', 'none')
+            loading.show();
+        })
+        .ajaxStop(function() {
+            loading.hide();
+        })
 })
 
 const getUsers = (users) => {
