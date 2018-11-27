@@ -11,14 +11,14 @@ if (port == null || port == "") {
 
 
 
-const mongoose = require('mongoose')
-mongoose.set('debug', true)
-mongoose.connect('mongodb://localhost/ownit-api', {
-    useCreateIndex: true,
-    useNewUrlParser: true
-})
+// const mongoose = require('mongoose')
+// mongoose.set('debug', true)
+// mongoose.connect('mongodb://localhost/ownit-api', {
+//     useCreateIndex: true,
+//     useNewUrlParser: true
+// })
 
-var db = mongoose.connection
+// var db = mongoose.connection
 const ownitRoute = require('./routes/ownit.register')
 const adminRoute = require('./routes/adminRoutes')
 
