@@ -2,8 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const path = require('path')
-const session = require('express-session')
-const MongoStore = require('connect-mongo')(session)
+    // const session = require('express-session')
+    // const MongoStore = require('connect-mongo')(session)
 let port = process.env.PORT;
 if (port == null || port == "") {
     port = 6060;
@@ -28,14 +28,14 @@ app.use(express.static(__dirname + '/public'))
 app.use(express.static(__dirname + '/views'))
 
 // use sessions for tracking logins
-app.use(session({
-    secret: 'Hard Work always pays',
-    resave: true,
-    saveUninitialized: false,
-    store: new MongoStore({
-        mongooseConnection: db
-    })
-}))
+// app.use(session({
+//     secret: 'Hard Work always pays',
+//     resave: true,
+//     saveUninitialized: false,
+//     store: new MongoStore({
+//         mongooseConnection: db
+//     })
+// }))
 
 app.get('/dashboard', (req, res) => {
     res.sendFile(path.join(__dirname + '/views/dashboard.html'))
