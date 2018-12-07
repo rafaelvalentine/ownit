@@ -76,7 +76,7 @@ $(document).ready(function() {
         deleteUser($(this).closest('tr'))
     })
 
-    var loading = $('#loader').hide()
+    var loading = $('#loader__index').hide()
     $(document)
         .ajaxStart(function() {
             let modal = $('.form-body')
@@ -184,6 +184,7 @@ function deleteUser(user) {
             url: deleteUser
         })
         .then((message) => {
+
             alert(userName.toUpperCase() + ' has been deleted')
             console.log(message)
             user.remove()

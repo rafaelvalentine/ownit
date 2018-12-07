@@ -1,5 +1,5 @@
 const database = require('../models')
-var path = require('path')
+
 exports.getUsers = (req, res) => {
     database.Ownit.find()
         .then((users) => {
@@ -52,8 +52,8 @@ exports.deleteUser = (req, res) => {
 
 exports.addAdmin = function(req, res, next) {
     database.Admins.create(req.body)
-        .then((newuser) => {
-            res.json(newuser)
+        .then((newadmin) => {
+            res.json(newadmin)
         })
         .catch((err) => {
             res.send(err)
@@ -105,34 +105,34 @@ exports.addAdmin = function(req, res, next) {
     //     }
 }
 
-exports.loggedAdmin = function(req, res, next) {
-    database.Admins.findById(req.session.userId)
-        .exec(function(error, user) {
-            if (error) {
-                return next(error)
-            } else {
-                if (user === null) {
-                    let err = new Error('Not authorized! Go back!')
-                    err.status = 400
-                    return next(err)
-                } else {
-                    return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
-                }
-            }
-        })
-}
+// exports.loggedAdmin = function(req, res, next) {
+//     database.Admins.findById(req.session.userId)
+//         .exec(function(error, user) {
+//             if (error) {
+//                 return next(error)
+//             } else {
+//                 if (user === null) {
+//                     let err = new Error('Not authorized! Go back!')
+//                     err.status = 400
+//                     return next(err)
+//                 } else {
+//                     return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
+//                 }
+//             }
+//         })
+// }
 
-exports.logoutAdmin = function(req, res, next) {
-    if (req.session) {
-        // delete session object
-        req.session.destroy(function(err) {
-            if (err) {
-                return next(err)
-            } else {
-                return res.redirect('/')
-            }
-        })
-    }
-}
+// exports.logoutAdmin = function(req, res, next) {
+//     if (req.session) {
+//         // delete session object
+//         req.session.destroy(function(err) {
+//             if (err) {
+//                 return next(err)
+//             } else {
+//                 return res.redirect('/')
+//             }
+//         })
+//     }
+// }
 
 module.exports = exports

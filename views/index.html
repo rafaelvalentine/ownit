@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Landing Page || OWNIT</title>
-    <link rel="shortcut icon" href="assets/img/OWNiT_favicon copy.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/OWNiT_favicon_copy.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--
 	  ========================================================================== 
@@ -81,32 +81,32 @@ if it's not present, don't show loader */
                         <a class="nav-link" href="#home">home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#drive2OWN_actual">drive 2 own</a>
+                        <a class="nav-link" href="#drive2OWN_actual">why ownit</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#drive2EARN_actual">drive 2 earn</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#register">register</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">dashboard</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															products
+												</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#drive2OWN_actual">drive 2 own</a>
+                            <a class="dropdown-item" href="#drive2EARN_actual">drive 2 earn</a>
+                            <!-- <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a> -->
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dashboard">dashboard</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Dropdown
-					</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link disabled" href="#">Disabled</a>
                     </li> -->
                 </ul>
@@ -154,15 +154,6 @@ if it's not present, don't show loader */
         <div class="partners--container">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <!-- <div class="carousel-item active">
-                        <img class="d-block one" src="assets/img/Ownit-partners__one.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item two">
-                        <img class="d-block " src="assets/img/Ownit-partners__two.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item three">
-                        <img class="d-block" src="assets/img/Ownit-partners__three.jpg" alt="Third slide">
-                    </div>-->
                     <div class="carousel-item four active">
                         <img class="d-block" src="assets/img/Ownit-partners__four.jpg" alt="Third slide">
                     </div>
@@ -172,9 +163,41 @@ if it's not present, don't show loader */
                 </div>
             </div>
         </div>
-
     </section>
 
+    <!--
+	  ========================================================================== 
+		Mission
+		========================================================================== 
+		-->
+
+    <section id="mission" class="mission">
+        <div class="mission--container">
+            <h2>why choose ownit</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="card">
+                        <div id="minimal" class="card-body">
+                            <h3>minimun capital requirement</h3>
+                            <p class="card-text">with ownit for as low as 10% of the total cost of car you can start can start using your desired car</p>
+                        </div>
+                    </div>
+                    <div id="assets" class="card">
+                        <div class="card-body">
+                            <h3>assets becomes yours</h3>
+                            <p class="card-text"> Ownit offers the unique system in with after a fixed period of deposits you can purchase the asset you are servicing </p>
+                        </div>
+                    </div>
+                    <div id="value" class="card">
+                        <div class="card-body">
+                            <h3>value added benefits</h3>
+                            <p class="card-text"> Ownit is comes packed with preinstalled features like car tracker, vehincle insurance and driver security vetting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--
 	  ========================================================================== 
 			Products
@@ -272,7 +295,7 @@ if it's not present, don't show loader */
 												<span aria-hidden="true">&times;</span>
 										</button>
                 </div>
-                <div id="loader"></div>
+                <div id="loader__index"></div>
                 <div id="thanksModal" class="modal-body thanks-body">
                     <img class='thanks-body__img' src="assets/img/checked.svg" alt="">
                     <h4 class="text-center">Thank you for registering</h4>
