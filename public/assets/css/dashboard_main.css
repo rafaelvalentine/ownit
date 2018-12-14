@@ -8,6 +8,10 @@ table tbody tr td,
     padding-right: 50px !important;
 }
 
+table thead th {
+    text-transform: capitalize;
+}
+
 .dropdown {
     visibility: hidden;
 }
@@ -20,6 +24,7 @@ address {
     overflow-y: visible;
 }
 
-#body-main .btn-primary {
+#body-main .btn-primary,
+#body-main .card .header h2:before {
     background: rgba(22, 99, 5, .9);
 }

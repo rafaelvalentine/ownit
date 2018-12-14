@@ -1,5 +1,4 @@
 const database = require('../models')
-
 exports.getUsers = (req, res) => {
     database.Ownit.find()
         .then((users) => {
@@ -134,5 +133,31 @@ exports.addAdmin = function(req, res, next) {
 //         })
 //     }
 // }
+exports.getCars = function(req, res) {
+    database.Car.find()
+        .then((cars) => {
+            res.json(cars)
+        })
+        .catch((err) => {
+            res.send(err)
+        })
+}
+exports.addCar = (req, res) => {
+    console.log(req.file)
+    database.Car.create({
+            make: req.body.make,
+            model: req.body.model,
+            year: req.body.year,
+            downpayment: req.body.downpayment,
+            carImage: req.file.path,
+            weeklypayment: req.body.weeklypayment
+        })
+        .then((newcar) => {
+            res.json(newcar)
+        })
+        .catch((err) => {
+            res.send(err)
+        })
+}
 
 module.exports = exports

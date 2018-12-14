@@ -1,9 +1,26 @@
 $(document).ready(function() {
+    /*
+   ==========================================================================
+      Gets All Cars in the database on page Load
+   ==========================================================================
+		*/
+    $.getJSON('/api/cars')
+        .then(getCars)
 
-    // Gets All Users in the database on page Load
+    /*
+   ==========================================================================
+       Gets All Users in the database on page Load
+   ==========================================================================
+		*/
+
     $.getJSON('/api/ownit')
         .then(getUsers)
 
+    /*
+       ==========================================================================
+            Make PUT for Users into the database
+       ==========================================================================
+      	*/
     $('#table').on('click', '.edit', function() {
         const currectUser = $(this).closest('tr')
         let user = currectUser.data('name')
@@ -72,8 +89,24 @@ $(document).ready(function() {
         })
     })
 
+    /*
+           ==========================================================================
+           Make DELETE request for Users into the database
+           ==========================================================================
+           */
     $('#table').on('click', '.delete', function() {
         deleteUser($(this).closest('tr'))
+    })
+
+    $('#slick_demo_2').on('click', '.sign_up', function() {
+        const selectedCar = $(this).closest('div').attr('car')
+            // let car = selectedCar.data('car')
+            // console.log(car)
+        let car = $('#car')
+        car.val(selectedCar)
+        car.css('textTransform', 'capitalize')
+        car.prop('disabled', true)
+        console.log(selectedCar)
     })
 
     var loading = $('#loader__index').hide()
@@ -81,10 +114,10 @@ $(document).ready(function() {
         .ajaxStart(function() {
             let modal = $('.form-body')
             modal.css('display', 'none')
-            loading.show();
+            loading.show()
         })
         .ajaxStop(function() {
-            loading.hide();
+            loading.hide()
         })
 })
 
@@ -94,23 +127,36 @@ const getUsers = (users) => {
         getUser(user)
     })
 }
+const getCars = (cars) => {
+    // add users to page
+    cars.map((car) => {
+        getCar(car)
+    })
+}
 
 function getUser(user) {
     let newUser = $('<tr>' +
-        '	<td>' +
+        '<td>' +
         '<img src="assets/img/user_avatar.png" class="rounded-circle avatar" alt="">   ' +
         '<p class="c_name">' + `${user.firstname} ${user.lastname}` + '</p>' +
-        '	</td>' +
+        '</td>' +
         '<td>' +
-        '	<span class="phone">' + '<i class="fa fa-phone"></i>  ' + user.number + '</span > ' +
-        '	</td>' +
-        '	<td>' +
+        '<span class="phone">' + '<i class="fa fa-phone"></i>  ' + user.number + '</span > ' +
+        '</td>' +
+        '<td>' +
         '<address>' + '<i class="fa fa-envelope-open"></i>  ' + user.email + '</address>' +
         '</td>' +
-        '	<td>' +
+        '<td>' +
         '<span>' + '<i class="fa fa-product-hunt"></i> ' + user.product + '</span>' +
         '</td>' +
         '<td>' +
+        '<span>' + '<i class="fa fa-car"></i> ' + user.car + '</span>' +
+        '</td>' +
+        // '<td>' +
+        // '<span>' + '<i class="fa fa-product-hunt"></i> ' + user.date + '</span>' +
+        // '</td>' +
+        '<td>' +
+        '<button data-target="#editModal" type="button" class="btn btn-primary btn-sm edit" title="Text"><i class="fa fa-comment"></i></button> ' +
         '<button data-target="#editModal" type="button" class="btn btn-info btn-sm edit" title="Edit"><i class="fa fa-edit"></i></button> ' +
         '<button type="button" data-type="confirm" class="btn btn-danger js-sweetalert btn-sm delete" title="Delete"><i class="fa fa-trash"></i></button> ' +
         '</td>' +
@@ -124,6 +170,28 @@ function getUser(user) {
     $('#table').append(newUser)
 }
 
+function getCar(car) {
+    let newCar = $('<div  >' +
+        '<div car="' + `${car.make} ${car.model} ${car.year}` + '" class="ibox-content product-box">' +
+        '<img class="card-img-top" src="' + car.carImage + '" alt="Card image cap">' +
+        '<h4>' +
+        '<span class="make_model">' + `${car.make} ${car.model}` + '</span>' +
+        '<span>' + car.year + '</span>' +
+        '</h4>' +
+        '<p>' +
+        'down payment: N ' + car.downpayment +
+        '</p>' +
+        '<p>' +
+        'weekly payment: N ' + car.weeklypayment +
+        '</p>' +
+        '<button type="button" class="btn btn-primary more" data-toggle="modal" data-target="#drive2OWN">' +
+        'Learn More' +
+        '</button> ' +
+        ' <button type="button" class="btn btn-primary sign_up" data-toggle="modal" data-target="#ownItForm" data-dismiss="modal">sign up</button>' +
+        '</div>' +
+        '</div>')
+    $('.slick_demo_2').slick('slickAdd', newCar)
+}
 const addUser = (event) => {
     event.preventDefault()
     let newUser = {
@@ -131,7 +199,8 @@ const addUser = (event) => {
         lastname: $('#inputLastName').val(),
         product: $('#inputProduct').val(),
         email: $('#emailAddress').val(),
-        number: $('#inputNumber').val()
+        number: $('#inputNumber').val(),
+        car: $('#car').val()
     }
     if ($('#inputFirstName').val() &&
         $('#inputLastName').val() &&
@@ -151,12 +220,14 @@ const addUser = (event) => {
                 $('#inputProduct').val('')
                 $('#emailAddress').val('')
                 $('#inputNumber').val('')
+                $('#car').val('')
             })
             .catch((err) => {
                 alert('Your request did not go throught, Please fill the Form again')
                 console.log(err)
             })
     }
+    // console.log(newUser)
 }
 const form = $('#ownItForm-main')
 $(form).submit(addUser)
@@ -184,7 +255,6 @@ function deleteUser(user) {
             url: deleteUser
         })
         .then((message) => {
-
             alert(userName.toUpperCase() + ' has been deleted')
             console.log(message)
             user.remove()
@@ -196,5 +266,5 @@ function deleteUser(user) {
 }
 
 function timedRefresh(timeoutPeriod) {
-    setTimeout("location.reload(true);", timeoutPeriod);
+    setTimeout('location.reload(true);', timeoutPeriod)
 }

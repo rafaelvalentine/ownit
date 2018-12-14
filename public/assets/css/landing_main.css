@@ -13,9 +13,9 @@
 body,
 #main {
     padding: 0 !important;
-    margin: 0;
-    width: 100%;
-    height: 100%;
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 h1,
@@ -47,7 +47,8 @@ a {
 ========================================================================== 
 */
 
-body {
+body,
+#main {
     background-color: #fff;
 }
 
@@ -183,6 +184,343 @@ body {
 .partners .carousel-item img {
     width: 100%;
     height: 65px;
+}
+
+
+/* 
+==========================================================================
+  Mission
+========================================================================== 
+*/
+
+#mission {
+    display: flex;
+    justify-content: center;
+    /* background-color: rgba(5, 39, 99, .1); */
+    background-color: rgba(80, 175, 21, .15);
+    padding: 20px 0 0;
+}
+
+.mission .row {
+    justify-content: center;
+    padding: 1.5rem 0 1rem;
+}
+
+.mission h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: rgb(1, 27, 51);
+}
+
+.mission hr {
+    border: .5px solid #056340;
+    width: 50px;
+}
+
+.mission .card {
+    margin: .5rem;
+    padding: 2rem 0 3rem;
+    border-radius: 10px;
+    width: 90% !important;
+}
+
+.mission .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: .5rem 1.25rem 0;
+    margin-top: .2rem;
+    color: #566374;
+}
+
+.mission .card-body h3 {
+    color: rgb(1, 27, 51);
+}
+
+
+/* 
+==========================================================================
+   Drive2Own
+========================================================================== 
+*/
+
+#drive2ownslider {
+    padding: 20px 0 0;
+}
+
+#drive2ownslider .col-lg-10 {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 95.333333%;
+    padding-right: 20px;
+    padding-left: 40px;
+}
+
+#drive2ownslider .logo {
+    width: 250px;
+    height: 90px;
+    display: block;
+    margin: 0 auto;
+}
+
+#drive2ownslider h3 {
+    font-weight: 500;
+    text-transform: lowercase;
+    color: rgb(1, 27, 51);
+}
+
+#drive2ownslider .product-box:hover,
+#drive2ownslider .product-box.active {
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 3px 7px 0 rgb(22, 99, 5);
+    -moz-box-shadow: 0 3px 7px 0 rgb(22, 99, 5);
+    box-shadow: 0 3px 7px 0 rgb(22, 99, 5);
+}
+
+#drive2ownslider .ibox-content {
+    background-color: #ffffff;
+    color: inherit;
+    padding: 15px 20px 20px 20px;
+    border-color: rgb(22, 99, 5);
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+    margin: 0px 5px 5px;
+    color: rgb(0, 18, 34);
+    text-transform: capitalize;
+    border-radius: 10px;
+    /* max-width: 100%; */
+}
+
+#drive2ownslider .ibox-content h4 {
+    margin: 15px 0 20px;
+}
+
+#drive2ownslider .ibox-content h4 span {
+    display: block;
+    font-style: inherit;
+}
+
+#drive2ownslider .ibox-content p {
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+
+#drive2ownslider .ibox-content p br {
+    display: none;
+}
+
+#drive2ownslider .slick-prev:before,
+.slick-next:before {
+    color: rgb(22, 99, 5) !important;
+}
+
+#drive2ownslider .card-img-top {
+    width: 200px;
+    height: 160px;
+    border-radius: 20px;
+}
+
+#drive2ownslider .ibox-content .btn-primary {
+    background-color: rgba(22, 99, 5, .85);
+    border-color: rgba(22, 99, 5, .85);
+    height: 40px;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#drive2ownslider .ibox-content button.more {
+    background-color: rgba(5, 39, 99, .95);
+    border-color: rgba(5, 39, 99, .35);
+    height: 40px;
+    margin-top: 20px;
+}
+
+#drive2ownslider .ibox-content .btn-primary:hover {
+    background-color: #fff;
+    border-color: rgba(22, 99, 5, .85);
+    color: rgba(22, 99, 5, .85);
+    height: 40px;
+}
+
+#drive2ownslider .ibox-content button.more:hover {
+    background-color: #fff;
+    border-color: rgba(5, 39, 99, .35);
+    color: rgba(5, 39, 99, 1);
+    height: 40px;
+}
+
+
+/* 
+==========================================================================
+   	Drive2Own Benefits
+========================================================================== 
+*/
+
+#drive2own-benefits {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(80, 175, 21, .15);
+    padding: 20px 0 0;
+}
+
+.drive2own-benefits .row {
+    justify-content: center;
+    padding: 1.5rem 0 1rem;
+}
+
+.drive2own-benefits h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: rgb(1, 27, 51);
+}
+
+.drive2own-benefits hr {
+    border: .5px solid #056340;
+    width: 50px;
+}
+
+.drive2own-benefits .card {
+    margin: .5rem;
+    padding: 3rem 0 5rem;
+    border-radius: 10px;
+    width: 90% !important;
+}
+
+.drive2own-benefits .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: .5rem 1.25rem 0;
+    margin-top: .2rem;
+    color: #566374;
+}
+
+.drive2own-benefits .card-body h3 {
+    color: rgb(1, 27, 51);
+    margin-bottom: 20px;
+}
+
+.drive2own-benefits .card-body h3 br {
+    display: none;
+}
+
+
+/* 
+==========================================================================
+   Drive2Own How it works 
+========================================================================== 
+*/
+
+#drive2own-how_it_works {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.how_it_works .row {
+    justify-content: center;
+    padding: 1.5rem 0 1rem;
+}
+
+.how_it_works h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: rgb(1, 27, 51);
+}
+
+.how_it_works hr {
+    border: .5px solid #056340;
+    width: 50px;
+}
+
+.how_it_works .card {
+    margin: .5rem .5rem 1.5rem;
+    padding: 3rem 0 5rem;
+    border-radius: 10px;
+    width: 90% !important;
+    position: relative;
+    border: 1px solid rgba(80, 175, 21, .25);
+}
+
+.how_it_works .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: .5rem 1.25rem 0;
+    margin-top: .2rem;
+    color: #566374;
+}
+
+.how_it_works .card-body .card-img-top {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto 10px;
+    position: absolute;
+    top: -25px;
+    left: 43%;
+}
+
+.how_it_works .terms {
+    display: flex;
+    justify-content: center;
+}
+
+.how_it_works .terms .btn-default {
+    background-color: #056340;
+    text-decoration: none;
+}
+
+.how_it_works .terms a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* 
+==========================================================================
+  	Work2Own
+========================================================================== 
+*/
+
+#work2own {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0;
+    border-top: 1px solid #056340;
+    background-color: #ffffff;
+}
+
+.work2own .row {
+    justify-content: center;
+    padding: 1.5rem 0 1rem;
+    margin: 10px 0;
+}
+
+#work2own_actual {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0;
+    color: #566374;
+}
+
+#work2own_actual h3 {
+    text-align: center;
+    color: rgb(1, 27, 51);
+}
+
+#work2own_actual p {
+    text-align: center;
+    color: #566374;
 }
 
 
@@ -349,7 +687,7 @@ body {
     font-weight: 700;
 }
 
-.register .register--container button {
+.register .register--container a {
     display: block;
     margin: 30px auto 0px;
     text-align: center;
@@ -358,7 +696,7 @@ body {
     width: 120px;
 }
 
-.register .register--container button:hover {
+.register .register--container a:hover {
     background-color: #fff;
     border: 2px solid #fff !important;
     color: rgba( 31, 125, 91, 1);
@@ -494,7 +832,7 @@ footer p {
     width: 80px;
     height: 80px;
     animation: spin 2s linear infinite;
-    margin: 10px auto;
+    margin: 30px auto;
 }
 
 @keyframes spin {
@@ -535,6 +873,73 @@ footer p {
     }
     /* 
 		==========================================================================
+   	Mission
+	 ========================================================================== 
+	*/
+    .mission .card {
+        margin: 0.5rem .25rem;
+        padding: 1rem 3px 2rem;
+        border-radius: 10px;
+        width: 90% !important;
+    }
+    /* 
+		==========================================================================
+   	Drive2Own
+	  ========================================================================== 
+	*/
+    #drive2ownslider .ibox-content {
+        background-color: #ffffff;
+        color: inherit;
+        padding: 25px 8px;
+        border-color: rgb(22, 99, 5);
+        border-image: none;
+        border-style: solid solid none;
+        border-width: 1px 0;
+        margin: 0px 5px 5px;
+        color: rgb(0, 18, 34);
+        text-transform: capitalize;
+    }
+    #drive2ownslider .ibox-content p br {
+        display: block;
+    }
+    /* 
+	  ==========================================================================
+  		Drive2Own Benefits
+   	========================================================================== 
+	*/
+    .drive2own-benefits .card-body h3 br {
+        display: block;
+    }
+    .drive2own-benefits .col-md-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 50%;
+        max-width: 45%;
+    }
+    /* 
+	  ==========================================================================
+  		Drive2Own How it works 
+   	========================================================================== 
+	*/
+    .how_it_works .card-body .card-img-top {
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin: 0 auto 10px;
+        position: absolute;
+        top: -25px;
+        left: 35%;
+    }
+    /* 
+	  ==========================================================================
+  	Work2Own
+   	========================================================================== 
+	*/
+    #work2own_actual .card-img-top {
+        width: 100%;
+        height: 80px;
+    }
+    /* 
+	  ==========================================================================
   	Products
    	========================================================================== 
 	*/
@@ -553,10 +958,10 @@ footer p {
         margin-top: 70px;
     }
     /* 
-		==========================================================================
+	  ==========================================================================
  		 Contact
-		========================================================================== 
-		*/
+	  ========================================================================== 
+	*/
     .contact--container {
         display: flex;
         flex-direction: row;
@@ -574,22 +979,33 @@ footer p {
     .contact__social--div {
         margin-top: 25px;
     }
+    #drive2ownslider .col-lg-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 95.333333%;
+        padding-right: 15px;
+        padding-left: 50px;
+    }
+    #drive2ownslider .card-img-top {
+        width: 100%;
+        height: 200px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     /* 
-		==========================================================================
+	  ==========================================================================
    	Navigation
-	 ========================================================================== 
+	  ========================================================================== 
    */
     .ownit_header .nav-item {
         margin: 0 10px;
     }
     /* 
-		==========================================================================
+	  ==========================================================================
    	Bannner
   	========================================================================== 
-	  */
+	*/
     .banner {
         padding-bottom: 0;
         background-color: rgba(22, 99, 5, 1);
@@ -619,10 +1035,41 @@ footer p {
         display: none;
     }
     /* 
-		==========================================================================
+	  ==========================================================================
+  		Drive2Own How it works 
+   	========================================================================== 
+	*/
+    .how_it_works .card {
+        margin: .5rem .5rem 2.5rem;
+        padding: 3rem 0 5rem;
+        border-radius: 10px;
+        width: 100% !important;
+        position: relative;
+        border: 1px solid rgba(80, 175, 21, .25);
+    }
+    .how_it_works .card-body .card-img-top {
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin: 0 auto 10px;
+        position: absolute;
+        top: -25px;
+        left: 40%;
+    }
+    /* 
+	  ==========================================================================
+  	Work2Own
+   	========================================================================== 
+	*/
+    #work2own_actual .card-img-top {
+        width: 100%;
+        height: 120px;
+    }
+    /* 
+	  ==========================================================================
    	Partners
   	========================================================================== 
-		*/
+	 */
     .partners {
         background-color: rgba(22, 99, 5, .15);
         display: flex;
@@ -631,6 +1078,32 @@ footer p {
     .partners .carousel-item img {
         width: 100%;
         height: 150px;
+    }
+    /* 
+	  ==========================================================================
+  		Drive2Own 
+   	========================================================================== 
+	*/
+    #drive2ownslider .col-lg-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 95.333333%;
+        padding-right: 15px;
+        padding-left: 70px;
+    }
+    #drive2ownslider .card-img-top {
+        width: 100%;
+        height: 200px;
+    }
+    /* 
+	  ==========================================================================
+  		Drive2Own Benefits
+   	========================================================================== 
+	*/
+    .drive2own-benefits .col-lg-3 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 50%;
+        max-width: 23%;
     }
     /* 
 		==========================================================================

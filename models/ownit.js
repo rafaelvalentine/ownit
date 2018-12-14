@@ -25,7 +25,16 @@ let OwnitSchema = new Schema({
     product: {
         type: String,
         required: 'Need to select a Product'
+    },
+    car: {
+        type: String,
+        required: 'No car selected'
+    },
+    date: {
+        type: Date,
+        default: Date.now
     }
+
 })
 const Ownit = mongoose.model('Ownit', OwnitSchema)
 

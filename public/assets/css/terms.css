@@ -1,0 +1,95 @@
+/* 
+==========================================================================
+	 General
+========================================================================== 
+*/
+
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+body,
+#main {
+    padding: 0 !important;
+    margin: 0!important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 35px;
+}
+
+p,
+a {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-transform: none;
+}
+
+
+/* 
+==========================================================================
+   Body 
+========================================================================== 
+*/
+
+body {
+    background-color: #fff;
+}
+
+.color {
+    color: #056340;
+    color: #fbae30;
+}
+
+
+/* 
+==========================================================================
+   	Navigation
+========================================================================== 
+*/
+
+.div-nav {
+    margin: 10px;
+}
+
+.div-nav .btn-default {
+    background-color: #fff;
+    border-color: #056340;
+    text-decoration: none;
+}
+
+.div-nav a {
+    color: #056340;
+    text-decoration: none;
+}
+
+
+/* 
+==========================================================================
+   	Legal
+========================================================================== 
+*/
+
+.card .card-header h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card .card-body p {
+    color: #566374;
+}

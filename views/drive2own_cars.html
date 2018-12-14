@@ -2,7 +2,6 @@
 <html class="no-js " lang="en">
 
 
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -236,6 +235,7 @@
                         </div>
                 </li>
                 <li class="header">ALL USERS</li>
+                <li class="header active">CARS</li>
                 <!-- <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Forms</span></a>
                     <ul class="ml-menu">
                         <li><a href="basic-form-elements.html">Basic Elements</a> </li>
@@ -566,7 +566,7 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>User List
+                    <h2>Vehincle List
                         <small>Welcome to OwnIt</small>
                     </h2>
                 </div>
@@ -574,8 +574,13 @@
                     <ul class="breadcrumb float-md-right">
                         <!-- <li class="breadcrumb-item"><a href="index-2.html"><i class="zmdi zmdi-home"></i> sQuare</a></li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li> -->
-                        <li class="breadcrumb-item active">Users</li>
+                        <li class="breadcrumb-item active">Cars</li>
+                        <!-- <li class="breadcrumb-item active"><button class="btn btn-orimary"></button></li> -->
+                        <!-- <button class="btn btn-orimary"></button> -->
                     </ul>
+                    <div>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#submitcar"><i class="fa fa-plus"></i>  Add</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -588,7 +593,7 @@
                         </div>
                         <div class="body">
                             <div class="table-responsive">
-                                <table id="table" class="table table-hover m-b-0 c_list">
+                                <table id="table_cars" class="table table-hover m-b-0 c_list">
                                     <thead>
                                         <tr>
                                             <!-- <th style="width: 50px;">
@@ -597,18 +602,20 @@
                                                     <label for="checkbox7"> &nbsp; </label>
                                                 </div>
                                             </th> -->
-                                            <th style="width: 200px;">Name</th>
-                                            <th>Phone</th>
-                                            <th>Email</th>
-                                            <th>Product</th>
-                                            <th>Car</th>
+                                            <th style="width: 200px;">Car</th>
+                                            <!-- <th>Make</th>
+                                            <th>Model</th>-->
+                                            <th>Year</th>
+                                            <th>Down Payment</th>
+                                            <th>Weekly Payment</th>
+
                                             <!-- <th>Date</th> -->
                                             <!-- <th style="width: 100px;">Action</th> -->
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <i class="fa fa-money"></i>
+                                        <i class="fas fa-money-bill-alt"></i>
                                     </tbody>
                                 </table>
                             </div>
@@ -628,7 +635,7 @@
 		</button> -->
 
     <!-- Modal -->
-    <div class="modal fade" id="editModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -647,61 +654,75 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="editModal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="submitcar" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="title" id="defaultModalLabel">Edit User</h4>
+                    <h4 class="title" id="defaultModalLabel">Add Car</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                        <span aria-hidden="true">&times;</span>
+                      </button>
                 </div>
                 <div class="modal-body">
-                    <div class="col-lg-12 col-md-12"> <b>First Name</b>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
-                            <input id="editFirstName" type="text" class="form-control mobile-phone-number" placeholder="Ex: John">
+                    <form name="addProductForm" id="addProductForm" action="javascript:;" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                        <div class="col-lg-12 col-md-12"> <b>Upload Image</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-file-image-o"></i></span>
+                                <input name="carImage" id="addCarImage" type="file" class="form-control mobile-phone-number" placeholder="upload Picture">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12"> <b>Last Name</b>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
-                            <input id="editLastName" type="text" class="form-control mobile-phone-number" placeholder="Ex: Sheppard">
+                        <div class="col-lg-12 col-md-12"> <b>Make</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
+                                <input name="make" id="addMake" type="text" class="form-control mobile-phone-number" placeholder="Ex: Lambogini">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12"> <b>Phone Number</b>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                            <input id="editNumber" type="text" class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00">
+                        <div class="col-lg-12 col-md-12"> <b>Model</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                <input name="model" id="addModel" type="text" class="form-control mobile-phone-number" placeholder="Ex: Aventador">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12"> <b>Email Address</b>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope-open"></i></span>
-                            <input id="editEmail" type="text" class="form-control email" placeholder="Ex: example@example.com">
+                        <div class="col-lg-12 col-md-12"> <b>Year</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope-open"></i></span>
+                                <input name="year" id="addYear" type="text" class="form-control email" placeholder="Ex: 2018">
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button id="saveEdit" type="button" class="btn btn-primary btn-round waves-effect">SAVE CHANGES</button>
-                    <button id="closeeditmodal" type="button" class="btn btn-danger btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
+                        <div class="col-lg-12 col-md-12"> <b>Down Payment</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope-open"></i></span>
+                                <input name="downpayment" id="addDownpayment" type="text" class="form-control email" placeholder="Ex: N 5000">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12"> <b>Weekly Payments</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope-open"></i></span>
+                                <input name="addWeeklypayment" id="addWeeklypayment" type="text" class="form-control email" placeholder="Ex: 2018">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="addCar" type="submit" class="btn btn-primary btn-round waves-effect">ADD DATABASE</button>
+                            <button id="closeAddCar" type="button" class="btn btn-danger btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <!-- Jquery Core Js -->
-    <script src="assets/bundles/libscripts.bundle.js"></script>
-    <!-- Lib Scripts Plugin Js -->
-    <script src="assets/bundles/vendorscripts.bundle.js"></script>
-    <!-- Lib Scripts Plugin Js -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <!-- Jquery Core Js -->
+        <script src="assets/bundles/libscripts.bundle.js"></script>
+        <!-- Lib Scripts Plugin Js -->
+        <script src="assets/bundles/vendorscripts.bundle.js"></script>
+        <!-- Lib Scripts Plugin Js -->
 
-    <script src="assets/bundles/mainscripts.bundle.js"></script>
-    <!-- Custom Js -->
-    <script src="assets/js/app.js "></script>
-    <script src="assets/plugins/popper.min.js "></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
-    <!-- <script src="https:	//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
+        <script src="assets/bundles/mainscripts.bundle.js"></script>
+        <!-- Custom Js -->
+        <script src="assets/js/app.js "></script>
+        <script src="assets/js/dashboard_cars.js "></script>
+        <script src="assets/plugins/popper.min.js "></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
+        <!-- <script src="https:	//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
 </body>
 
 <!-- Mirrored from thememakker.com/wrap-theme/square/html/light/table-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Sep 2018 01:43:45 GMT -->

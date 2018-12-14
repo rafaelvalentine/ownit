@@ -24,3 +24,4 @@ mongoose.Promise = Promise
 
 module.exports.Admins = require('./admins')
 module.exports.Ownit = require('./ownit')
+module.exports.Car = require('./cars')

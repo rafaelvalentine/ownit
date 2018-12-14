@@ -11,13 +11,19 @@ const database = require('../models')
     // GET route for admins to view dashboard
 router.route('/dashboard')
     .get((req, res) => {
-        res.sendFile(path.join(__dirname, '../views', 'dashboard.html'));
-    })
+        res.sendFile(path.join(__dirname, '../views', 'dashboard.html'))
 
-//POST route for Admin login  
+    })
+    // GET route for admins to view dashboard
+router.route('/drive2own_cars')
+    .get((req, res) => {
+        res.sendFile(path.join(__dirname, '../views', 'drive2own_cars.html'))
+
+    })
+    //POST route for Admin login  
 router.route('/login')
     .get((req, res) => {
-        res.sendFile(path.join(__dirname, '../views', 'sign-in.html'));
+        res.sendFile(path.join(__dirname, '../views', 'sign-in.html'))
     })
     .post((req, res) => {
         console.log()
