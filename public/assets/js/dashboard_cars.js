@@ -8,40 +8,45 @@ $(document).ready(function() {
         .then(getdashboardCars)
 
 
-    $("#addProductForm").submit(function(event) {
+    // $("#addProductForm").submit(function(event) {
+    //     //disable the default form submission
+    //     event.preventDefault();
+    //     //grab all form data  
+    //     // let make = $('#addMake').val(),
+    //     //     model = $('#addModel').val(),
+    //     //     year = $('#addYear').val(),
+    //     //     downPayment = $('#addDownpayment').val(),
+    //     //     carImage = `uploads\\${make}-${model}-${year}.jpg`,
+    //     //     weeklyPayment = $('#addWeeklypayment').val()
+    //     let newCar = {
+    //         make: $('#addMake').val(),
+    //         model: $('#addModel').val(),
+    //         year: $('#addYear').val(),
+    //         downpayment: $('#addDownpayment').val(),
+    //         carImage: $('#addCarImage').val(),
+    //         weeklypayment: $('#addWeeklypayment').val()
+    //     }
+    //     const formData = $(this)
 
-        //disable the default form submission
-        event.preventDefault();
-        //grab all form data  
-        let newCar = {
-            make: $('#addMake').val(),
-            model: $('#addModel').val(),
-            year: $('#addYear').val(),
-            downpayment: $('#addDownpayment').val(),
-            carImage: $('#addcarImage').val(),
-            weeklypayment: $('#addWeeklypayment').val()
-        }
-        const formData = $(this)
+    //     console.log(mainBody)
+    //     $.ajax({
+    //         url: '/api/cars',
+    //         type: 'POST',
+    //         data: newCar,
+    //         async: false,
+    //         cache: false,
+    //         contentType: false,
+    //         processData: false,
+    //         success: function() {
+    //             console.log('Form Submitted!');
+    //         },
+    //         error: function() {
+    //             console.log("error in ajax form submission");
+    //         }
+    //     });
 
-        console.log(newCar)
-        $.ajax({
-            url: '/api/cars',
-            type: 'POST',
-            data: newCar,
-            async: false,
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function() {
-                console.log('Form Submitted!');
-            },
-            error: function() {
-                console.log("error in ajax form submission");
-            }
-        });
-
-        return false;
-    });
+    //     // return false;
+    // });
 
 })
 
