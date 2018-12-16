@@ -5,7 +5,7 @@ const routeHelpers = require('../helpers/routeHelpers')
 const multer = require('multer')
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, 'uploads/')
+        cb(null, './uploads/')
     },
     filename: function(req, file, cb) {
         cb(null, file.originalname)
@@ -27,34 +27,12 @@ const uploads = multer({
 })
 router.route('/')
     .get(routeHelpers.getCars)
-    .post(uploads.single('carImage'), (req, res) => {
-        // let path = req.file.path
-        let mainBody = {
-            make: req.body.make,
-            model: req.body.model,
-            year: req.body.year,
-            downpayment: req.body.downpayment,
-            carImage: 'uploads\\' + req.body.make + '-' + req.body.model + '-' + req.body.year + '.jpg',
-            weeklypayment: req.body.weeklypayment
-        }
-        console.log(req.headers)
-        database.Car.create(mainBody)
-            .then((newcar) => {
-                console.log(newcar)
-                    // res.send('Car has been added to database')
-                res.redirect('/drive2own_cars')
-            })
-            .catch((err) => {
-                res.send(err)
-            })
-    })
+    .post(uploads.single('carImage'), routeHelpers.addCar)
 
-router.route('/:userid')
-    .get(routeHelpers.findUser)
-    .put(routeHelpers.updateUser)
-    .delete(routeHelpers.deleteUser)
-    // router.route('/login')
-    //     .get(routeHelpers.getAdmin)
-    //     .post(routeHelpers.addAdmin)
+router.route('/:carid')
+    .get(routeHelpers.findCar)
+    .put(uploads.single('carImage'), routeHelpers.updateCar)
+    .delete(routeHelpers.deleteCar)
+
 
 module.exports = router

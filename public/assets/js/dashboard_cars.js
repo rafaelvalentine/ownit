@@ -8,46 +8,97 @@ $(document).ready(function() {
         .then(getdashboardCars)
 
 
-    // $("#addProductForm").submit(function(event) {
-    //     //disable the default form submission
-    //     event.preventDefault();
-    //     //grab all form data  
-    //     // let make = $('#addMake').val(),
-    //     //     model = $('#addModel').val(),
-    //     //     year = $('#addYear').val(),
-    //     //     downPayment = $('#addDownpayment').val(),
-    //     //     carImage = `uploads\\${make}-${model}-${year}.jpg`,
-    //     //     weeklyPayment = $('#addWeeklypayment').val()
-    //     let newCar = {
-    //         make: $('#addMake').val(),
-    //         model: $('#addModel').val(),
-    //         year: $('#addYear').val(),
-    //         downpayment: $('#addDownpayment').val(),
-    //         carImage: $('#addCarImage').val(),
-    //         weeklypayment: $('#addWeeklypayment').val()
-    //     }
-    //     const formData = $(this)
+    $('#remember_me').click(() => {
+        $('#editCarImage').attr('type', 'file')
+        $('#editCarImage').val('')
+        $('#editCarImage').prop('disabled', false)
+    })
+    $('#table_cars').on('click', '.edit', function() {
+        const currectCar = $(this).closest('tr')
+        let car = currectCar.data('car')
+            // let editModal = $('#editModal')
+            // let body = $('#body-main')
+        let make = currectCar.data('make')
+        let model = currectCar.data('model')
+        let year = currectCar.data('year')
+        let down = currectCar.data('down')
+        let carId = currectCar.data('id')
+        let weekly = currectCar.data('weekly')
+        let image = currectCar.data('image')
+        let edittedCar = {
+                make: make,
+                model: model,
+                year: year,
+                down: down,
+                weekly: weekly,
+                carid: carId,
+                image: image
+            }
+            // let modalBackdrop = $('<div class="modal-backdrop fade show"></div>')
+        console.log(`you want to edit : ${car}`)
+        console.log('full details : ' + JSON.stringify(edittedCar))
 
-    //     console.log(mainBody)
-    //     $.ajax({
-    //         url: '/api/cars',
-    //         type: 'POST',
-    //         data: newCar,
-    //         async: false,
-    //         cache: false,
-    //         contentType: false,
-    //         processData: false,
-    //         success: function() {
-    //             console.log('Form Submitted!');
-    //         },
-    //         error: function() {
-    //             console.log("error in ajax form submission");
-    //         }
-    //     });
+        // editModal.addClass('show')
+        // editModal.css('display', 'block')
+        // body.css('overflow-y', 'hidden')
+        // body.append(modalBackdrop)
+        // $('#editCarImage').attr('type', 'text')
+        $('#editCarImage').val(image)
+        $('#editCarImage').prop('disabled', true)
+        $('#editMake').val(make)
+        $('#editModel').val(model)
+        $('#editYear').val(year)
+        $('#editDownPayment').val(down)
+        $('#editWeeklyPayment').val(weekly)
+        $('#editCarForm').attr('action', `/api/cars/${carId}?_method=PUT`)
+            // console.log($('#editCarForm').attr('action'))
 
-    //     // return false;
-    // });
+        // $('#saveEdit').click(function() {
+        //     let edittedUser = {
+        //         firstname: $('#editFirstName').val(),
+        //         lastname: $('#editLastName').val(),
+        //         email: $('#editEmail').val(),
+        //         number: $('#editNumber').val()
+        //     }
+        //     let updateUser = '/api/ownit/' + userId
+        //     if ($('#editFirstName').val() !== first ||
+        //         $('#editLastName').val() !== last ||
+        //         $('#editEmail').val() !== email ||
+        //         $('#editNumber').val() !== number) {
+        //         $.ajax({
+        //                 method: 'PUT',
+        //                 url: updateUser,
+        //                 data: edittedUser
+        //             })
+        //             .then(function(data) {
+        //                 body.css('overflow-y', 'visible')
+        //                 modalBackdrop.remove()
+        //                 editModal.removeClass('show')
+        //                 editModal.css('display', 'none')
+        //                 currectUser.remove()
+        //                 window.onload = timedRefresh(3000)
+        //             })
+        //             .catch((err) => {
+        //                 console.log(err)
+        //                 alert('Changes to ' + user + "Didn't get effected")
+        //             })
+        //         console.log(edittedUser, userId)
+        //     } else {
+        //         body.css('overflow-y', 'visible')
+        //         modalBackdrop.remove()
+        //         editModal.removeClass('show')
+        //         editModal.css('display', 'none')
+        //         console.log(edittedUser, userId)
+        //     }
+        // })
 
+        // $('#closeeditmodal').click(function() {
+        //     body.css('overflow-y', 'visible')
+        //     modalBackdrop.remove()
+        //     editModal.removeClass('show')
+        //     editModal.css('display', 'none')
+        // })
+    })
 })
 
 const getdashboardCars = (cars) => {
@@ -70,10 +121,10 @@ function getdashboardCar(car) {
         '<span>' + '<i class="fa fa-money"></i>  ' + car.downpayment + '</span>' +
         '</td>' +
         '<td>' +
-        '<span>' + '<i class="fa fa-credit-card"></i> ' + car.weeklypayment + '</span>' +
+        '<span>' + '<i class="fas fa-hand-holding-usd"></i>  ' + car.weeklypayment + '</span>' +
         '</td>' +
         '<td>' +
-        '<button data-target="#editModal" type="button" class="btn btn-info btn-sm edit" title="Edit"><i class="fa fa-edit"></i></button> ' +
+        '<button data-toggle="modal" data-target="#editcar" type="button" class="btn btn-info btn-sm edit" title="Edit"><i class="fa fa-edit"></i></button> ' +
         '<button type="button" data-type="confirm" class="btn btn-danger js-sweetalert btn-sm delete" title="Delete"><i class="fa fa-trash"></i></button> ' +
         '</td>' +
         '</tr>')

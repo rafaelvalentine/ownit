@@ -9,6 +9,7 @@
     <meta name="description" content="sQuare Bootstrap 4 Angular 5 admin dashboard with ui kit.">
 
     <title> Dashboard || OWNIT</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="icon" href="assets/img/ownit_favicon_copy.png" type="image/x-icon">
     <!-- Favicon-->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -564,13 +565,20 @@
 
     <section class="content">
         <div class="block-header">
+            <!-- <div id="alert-msg" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div> -->
             <div class="row">
+
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>Vehincle List
                         <small>Welcome to OwnIt</small>
                     </h2>
                 </div>
-                <div class="col-lg-5 col-md-6 col-sm-12">
+                <div class="add-car col-lg-5 col-md-6 col-sm-12">
                     <ul class="breadcrumb float-md-right">
                         <!-- <li class="breadcrumb-item"><a href="index-2.html"><i class="zmdi zmdi-home"></i> sQuare</a></li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li> -->
@@ -584,6 +592,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container-fluid">
             <div class="row clearfix">
                 <div class="col-lg-12">
@@ -596,26 +605,15 @@
                                 <table id="table_cars" class="table table-hover m-b-0 c_list">
                                     <thead>
                                         <tr>
-                                            <!-- <th style="width: 50px;">
-                                                <div class="checkbox mb-0">
-                                                    <input class="select-all" type="checkbox" name="checkbox" id="checkbox7">
-                                                    <label for="checkbox7"> &nbsp; </label>
-                                                </div>
-                                            </th> -->
                                             <th style="width: 200px;">Car</th>
-                                            <!-- <th>Make</th>
-                                            <th>Model</th>-->
                                             <th>Year</th>
                                             <th>Down Payment</th>
                                             <th>Weekly Payment</th>
-
-                                            <!-- <th>Date</th> -->
-                                            <!-- <th style="width: 100px;">Action</th> -->
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <i class="fas fa-money-bill-alt"></i>
+
                                     </tbody>
                                 </table>
                             </div>
@@ -664,7 +662,7 @@
                       </button>
                 </div>
                 <div class="modal-body">
-                    <form name="addProductForm" id="addProductForm" action="/api/cars" method="post" accept-charset="utf-8">
+                    <form name="addProductForm" id="addProductForm" action="/api/cars" method="post" accept-charset="utf-8" enctype="multipart/form-data">
                         <div class="col-lg-12 col-md-12"> <b>Upload Image</b>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-file-image-o"></i></span>
@@ -673,31 +671,31 @@
                         </div>
                         <div class="col-lg-12 col-md-12"> <b>Make</b>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-car"></i></i></span>
                                 <input name="make" id="addMake" type="text" class="form-control mobile-phone-number" placeholder="Ex: Lambogini">
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12"> <b>Model</b>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                <span class="input-group-addon"><i class="fas fa-car-side"></i></span>
                                 <input name="model" id="addModel" type="text" class="form-control mobile-phone-number" placeholder="Ex: Aventador">
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12"> <b>Year</b>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-envelope-open"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-calendar-check-o"></i></span>
                                 <input name="year" id="addYear" type="text" class="form-control email" placeholder="Ex: 2018">
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12"> <b>Down Payment</b>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-envelope-open"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-money"></i></span>
                                 <input name="downpayment" id="addDownpayment" type="text" class="form-control email" placeholder="Ex: N 5000">
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12"> <b>Weekly Payments</b>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-envelope-open"></i></span>
+                                <span class="input-group-addon"><i class="fas fa-hand-holding-usd"></i></span>
                                 <input name="weeklypayment" id="addWeeklypayment" type="text" class="form-control email" placeholder="Ex: N 1000">
                             </div>
                         </div>
@@ -709,20 +707,84 @@
                 </div>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <!-- Jquery Core Js -->
-        <script src="assets/bundles/libscripts.bundle.js"></script>
-        <!-- Lib Scripts Plugin Js -->
-        <script src="assets/bundles/vendorscripts.bundle.js"></script>
-        <!-- Lib Scripts Plugin Js -->
+    </div>
+    <div class="modal fade" id="editcar" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="title" id="defaultModalLabel">Edit Car</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+                <div class="modal-body">
+                    <form name="editCarForm" id="editCarForm" action="/api/cars?_method=PUT" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+                        <input type="hidden" name="_method" value="PUT">
+                        <div class="col-lg-12 col-md-12"> <b>Upload Image</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-file-image-o"></i></span>
+                                <input name="carImage" id="editCarImage" type="text" class="form-control mobile-phone-number" placeholder="upload Picture">
+                            </div>
+                            <div class="checkbox">
+                                <input id="remember_me" type="checkbox">
+                                <label for="remember_me">
+                                       Click to upload new image
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12"> <b>Make</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-car"></i></i></span>
+                                <input name="make" id="editMake" type="text" class="form-control mobile-phone-number" placeholder="Ex: Lambogini">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12"> <b>Model</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fas fa-car-side"></i></span>
+                                <input name="model" id="editModel" type="text" class="form-control mobile-phone-number" placeholder="Ex: Aventador">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12"> <b>Year</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-calendar-check-o"></i></span>
+                                <input name="year" id="editYear" type="text" class="form-control email" placeholder="Ex: 2018">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12"> <b>Down Payment</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-money"></i></span>
+                                <input name="downpayment" id="editDownPayment" type="text" class="form-control email" placeholder="Ex: N 5000">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12"> <b>Weekly Payments</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fas fa-hand-holding-usd"></i></span>
+                                <input name="weeklypayment" id="editWeeklyPayment" type="text" class="form-control email" placeholder="Ex: N 1000">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="editCar" type="submit" class="btn btn-primary btn-round waves-effect">SAVE CHANGES</button>
+                            <button id="closeEditCar" type="button" class="btn btn-danger btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Jquery Core Js -->
+    <script src="assets/bundles/libscripts.bundle.js"></script>
+    <!-- Lib Scripts Plugin Js -->
+    <script src="assets/bundles/vendorscripts.bundle.js"></script>
+    <!-- Lib Scripts Plugin Js -->
 
-        <script src="assets/bundles/mainscripts.bundle.js"></script>
-        <!-- Custom Js -->
-        <script src="assets/js/app.js "></script>
-        <script src="assets/js/dashboard_cars.js "></script>
-        <script src="assets/plugins/popper.min.js "></script>
-        <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
-        <!-- <script src="https:	//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
+    <script src="assets/bundles/mainscripts.bundle.js"></script>
+    <!-- Custom Js -->
+    <script src="assets/js/app.js "></script>
+    <script src="assets/js/dashboard_cars.js "></script>
+    <script src="assets/plugins/popper.min.js "></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
+    <!-- <script src="https:	//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
 </body>
 
 <!-- Mirrored from thememakker.com/wrap-theme/square/html/light/table-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Sep 2018 01:43:45 GMT -->

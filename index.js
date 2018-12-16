@@ -1,4 +1,5 @@
 const express = require('express')
+var methodOverride = require('method-override')
 const bodyParser = require('body-parser')
 const flash = require('connect-flash');
 const app = express()
@@ -25,6 +26,10 @@ const adminRoute = require('./routes/adminRoutes')
 const carRoute = require('./routes/carsRoute')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+
+// override with POST having ?_method=DELETE
+app.use(methodOverride('_method'))
+
 app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/views'));
@@ -44,7 +49,7 @@ app.use(express.static(__dirname + '/views'));
 
 // app.use(flash());
 
-// //Global variables
+//Global variables
 // app.use(function(req, res, next) {
 //     res.locals.success_msg = req.flash('success_msg');
 //     res.locals.error_msg = req.flash('error_msg');

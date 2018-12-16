@@ -143,6 +143,7 @@ exports.getCars = function(req, res) {
         })
 }
 exports.addCar = (req, res) => {
+
     console.log(req.file)
     database.Car.create({
             make: req.body.make,
@@ -153,11 +154,54 @@ exports.addCar = (req, res) => {
             weeklypayment: req.body.weeklypayment
         })
         .then((newcar) => {
-            res.json(newcar)
+            // let alert = document.getElementById('alert-msg')
+            // res.json(newcar)
+            res.redirect('/drive2own_cars')
+            console.log(newcar)
         })
         .catch((err) => {
             res.send(err)
         })
 }
 
+exports.findCar = (req, res) => {
+    database.Car.findById(req.params.carid)
+        .then((foundcar) => {
+            res.json(foundcar)
+        })
+        .catch((err) => {
+            res.send(err)
+        })
+}
+exports.updateCar = (req, res) => {
+    console.log(req.file, req.headers, req.body)
+    let path = req.body.carImage
+    if (req.file) {
+        path = req.file.path
+    }
+    database.Car.findOneAndUpdate({ _id: req.params.carid }, {
+            make: req.body.make,
+            model: req.body.model,
+            year: req.body.year,
+            downpayment: req.body.downpayment,
+            carImage: path,
+            weeklypayment: req.body.weeklypayment
+        }, { new: true })
+        .then((foundcar) => {
+            res.json(foundcar)
+                // res.redirect('/drive2own_cars')
+        })
+        .catch((err) => {
+            res.send(err)
+        })
+}
+exports.deleteCar = (req, res) => {
+    database.Car.findOneAndDelete({ _id: req.params.carid })
+        .then(() => {
+            res.send('Entry Deleted')
+        })
+        .catch((err) => {
+            res.send(err)
+        })
+}
 module.exports = exports

@@ -28,3 +28,21 @@ address {
 #body-main .card .header h2:before {
     background: rgba(22, 99, 5, .9);
 }
+
+
+/* .form-control:focus {
+    border-color: rgba(22, 99, 5, .9);
+} */
+
+@media screen and (min-width: 700px) {
+    /* 
+==========================================================================
+  Add-Car
+========================================================================== 
+*/
+    .add-car {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
