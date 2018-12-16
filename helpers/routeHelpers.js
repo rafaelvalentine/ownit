@@ -188,8 +188,9 @@ exports.updateCar = (req, res) => {
             weeklypayment: req.body.weeklypayment
         }, { new: true })
         .then((foundcar) => {
-            res.json(foundcar)
-                // res.redirect('/drive2own_cars')
+            res.redirect('/drive2own_cars')
+                // res.json(foundcar)
+
         })
         .catch((err) => {
             res.send(err)
@@ -198,7 +199,7 @@ exports.updateCar = (req, res) => {
 exports.deleteCar = (req, res) => {
     database.Car.findOneAndDelete({ _id: req.params.carid })
         .then(() => {
-            res.send('Entry Deleted')
+            res.redirect('/drive2own_cars')
         })
         .catch((err) => {
             res.send(err)

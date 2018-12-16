@@ -235,7 +235,7 @@
                         </div> -->
                         </div>
                 </li>
-                <li class="header">ALL USERS</li>
+                <li class="header"> <a href="/dashboard">ALL USERS</a> </li>
                 <li class="header active">CARS</li>
                 <!-- <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Forms</span></a>
                     <ul class="ml-menu">
@@ -633,7 +633,7 @@
 		</button> -->
 
     <!-- Modal -->
-    <div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="deletecar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -643,11 +643,19 @@
 										</button>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <form name="deleteCarForm" id="deleteCarForm" action="/api/cars?_method=DELETE" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <div>
+                            <p>
+                                Are you sure you want to delete <strong id="car_details"></strong> ?
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button id="deleteCar" type="submit" class="btn btn-primary btn-round waves-effect">DELETE</button>
+                            <button id="closeEditCar" type="button" class="btn btn-danger btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
