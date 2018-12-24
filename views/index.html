@@ -16,59 +16,18 @@
     <link href="assets/plugins/slick/slick-theme.css" rel="stylesheet">
     <link href="assets/plugins/animate.css" rel="stylesheet">
     <link href="assets/plugins/style.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="assets/css/main.css">-->
     <link rel="stylesheet" href="assets/css/ecommerce.css">
-    <!-- <link rel="stylesheet" href="assets/css/color_skins.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/landing_main.css">
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script> -->
-    <!-- <style>
-        /* Paste this css to your style sheet file or under head tag */
-        /* This only works with JavaScript, 
-if it's not present, don't show loader */
-        
-        .no-js #loader {
-            display: none;
-        }
-        
-        .js #loader {
-            display: block;
-            position: absolute;
-            left: 100px;
-            top: 0;
-        }
-        
-        .se-pre-con {
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            background: url(".//assets/img/Preloader_2.gif") center no-repeat #fff;
-        }
-    </style> -->
-    <!-- <script>
-        //paste this code under the head tag or in a separate js file.
-        // Wait for window load
-        $(window).load(function() {
-            // Animate loader off screen
-            $(".se-pre-con").fadeOut("slow");;
-        });
-		</script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
     <script src="assets/js/form-validation.js"></script>
-
-
 </head>
 
 <body id="home">
-    <div class="se-pre-con"></div>
 
     <!--
 	  ========================================================================== 
@@ -80,7 +39,6 @@ if it's not present, don't show loader */
             <a class="navbar-brand" href="#"><img src="assets/img/OWNiT__logo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
-						<!-- <i class="fa fa-bars"></i> -->
 					  </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -91,40 +49,24 @@ if it's not present, don't show loader */
                     <li class="nav-item">
                         <a class="nav-link" href="#mission">why ownit</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#drive2EARN_actual">drive 2 earn</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#register">register</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="/dashboard">dashboard</a>
-                    </li> -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 															products
 												</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#drive2ownslider">drive 2 own</a>
-                            <a class="dropdown-item" href="#work2own">work 2 earn</a>
-                            <!-- <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a> -->
+                            <a class="dropdown-item" href="#drive2ownslider">drive2own</a>
+                            <a class="dropdown-item" href="#work2own">work2earn</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard">dashboard</a>
+                        <a class="nav-link" id='dashboard-a' href="/dashboard">
+                            <button type="button" class="dashboard-btn btn ">LOGIN</button>
+                        </a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li> -->
                 </ul>
-                <!-- <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form> -->
             </div>
         </nav>
     </header>
@@ -136,19 +78,19 @@ if it's not present, don't show loader */
     <section id="banner" class="banner">
         <div class="banner--container">
             <div class="jumbotron">
-                <h1 class="display-4">Welcome, to OwnIt</h1>
+                <h1 class="display-4">Now you can own that vehicle</h1>
                 <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
 							<hr class="my-4"> -->
                 <p>
-                    Ever wanted to Own your property? <br> With OwnIt no full or upfront payments. Ownit Offers you the premium platform to make your dreams come true, just sign up and OwnIt in less than 2 years.
+                    The tools of your trade are no longer out of your reach. With a small down payment and a weekly repayment schedule, we make it possible for you to own the tools of your trade
                 </p>
                 <a class="btn btn-primary btn-lg" href="#products" role="button">Learn more</a>
             </div>
             <div class="card">
                 <!-- <span class=" one"></span> -->
-                <img class="card-img-top one" src="assets/img/davids-kokainis-639290-unsplash480px.jpg" alt="">
-                <img class="card-img-top two" src="assets/img/davids-kokainis-639290-unsplash720px.jpg" alt="">
-                <img class="card-img-top three" src="assets/img/davids-kokainis-639290-unsplash1080px.jpg" alt="">
+                <img class="card-img-top one" src="assets/img/holding_keys-remade.jpg" alt="">
+                <img class="card-img-top two" src="assets/img/holding_keys-medium-remade.jpg" alt="">
+                <img class="card-img-top three" src="assets/img/holding_keys-large-2.jpg" alt="">
 
             </div>
         </div>
@@ -162,7 +104,7 @@ if it's not present, don't show loader */
 		========================================================================== 
 		-->
 
-    <section id="partners" class="partners">
+    <!-- <section id="partners" class="partners">
         <div class="partners--container">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -175,7 +117,7 @@ if it's not present, don't show loader */
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!--
 	  ========================================================================== 
@@ -185,26 +127,27 @@ if it's not present, don't show loader */
 
     <section id="mission" class="mission">
         <div class="mission--container">
-            <h2>why choose ownit</h2>
+            <h2>why participate in own it programmes</h2>
             <hr>
             <div class="container">
                 <div class="row">
                     <div class="card col-sm-12 col-md-3 col-lg-3">
                         <div id="minimal" class="card-body">
                             <h3>minimun capital requirement</h3>
-                            <p class="card-text">with ownit for as low as 10% of the total cost of car you can start can start using your desired car</p>
+                            <p class="card-text">With a down payment as low as 10% of the value of the item, you can get started
+                            </p>
                         </div>
                     </div>
                     <div id="assets" class="card col-sm-12 col-md-3 col-lg-3">
                         <div class="card-body">
                             <h3>assets becomes yours</h3>
-                            <p class="card-text"> Ownit offers the unique system in with after a fixed period of deposits you can purchase the asset you are servicing </p>
+                            <p class="card-text"> Simply meet up with the weekly repayment schedule, and after a fixed period of time, it becomes yours.</p>
                         </div>
                     </div>
                     <div id="value" class="card col-sm-12 col-md-3 col-lg-3">
                         <div class="card-body">
                             <h3>value added <br> benefits</h3>
-                            <p class="card-text"> Ownit is comes packed with preinstalled features like car tracker, vehincle insurance and driver security vetting</p>
+                            <p class="card-text"> Items bought under the OwnIt programmes comes with unique benefits like car tracker, comprehensive insurance, free servicing, etc.</p>
                         </div>
                     </div>
                 </div>
@@ -256,12 +199,11 @@ if it's not present, don't show loader */
     <section id="drive2ownslider" class="">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <img class="logo" src="assets/img/DR2OWN_logo.png" alt="">
+                <img class="logo" src="assets/img/DR2OWN_logo-trans2.png" alt="">
                 <h3 class="text-center m">
                     we buy you a car to use for taxify and uber and after 24 months you own the car.
                 </h3>
                 <div id="slick_demo_2" class="slick_demo_2">
-
                 </div>
             </div>
         </div>
@@ -279,56 +221,66 @@ if it's not present, don't show loader */
             <div class="row">
                 <div id="anti-theft" class="col-sm-12 col-md-12 col-lg-3 card">
                     <div class="card-body">
-                        <h3>anti theft <br> GPS</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
+                        <h4>anti theft GPS</h4>
+                        <br>
+                        <p class="card-text">All vehicles will be installed with a anti-theft GPS. You can be rest assured that your vehicle is safe</p>
 
                     </div>
                 </div>
                 <div id="insurance" class="col-sm-12 col-md-12 col-lg-3 card">
                     <div class="card-body">
-                        <h3>comprehensive insurance</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel. </p>
+                        <h4>comprehensive insurance</h4>
+                        <p class="card-text">We have negotiated the best comprehensive insurance possible with our insurance partners. We’d ensure your car is covered.
+                        </p>
 
                     </div>
                 </div>
                 <div id="saving" class="col-sm-12 col-md-12 col-lg-3 card">
                     <div class="card-body">
-                        <h3>cooperative savings</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
+                        <h4>cooperative savings</h4>
+                        <p class="card-text">Every week, a small amount is kept aside for you in the BossCoop cooperative society.</p>
 
                     </div>
                 </div>
                 <div id="health" class="col-sm-12 col-md-12 col-lg-3 card">
                     <div class="card-body">
-                        <h3> premium health insurance</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
+                        <h4> premium health insurance</h4>
+                        <p class="card-text">For those times when you may fall ipants in OwnIt programmes have free health cover. Paid for by us.</p>
 
                     </div>
                 </div>
                 <div id="accident" class="col-sm-12 col-md-12 col-lg-3 card">
                     <div class="card-body">
-                        <h3>group personnal health insurance</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
-
+                        <h4>group personal accident insurance</h4>
+                        <p class="card-text"> In the event of the unthinkable, a car crash, your vehicle and yourself are covered.</p>
                     </div>
                 </div>
                 <div id="oil" class="col-sm-12 col-md-12 col-lg-3 card">
                     <div class="card-body">
-                        <h3>scheduled oil changes</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
+                        <h4>scheduled oil changes</h4>
+                        <br>
+                        <br>
+
+                        <p class="card-text">Your oil changes are on us. Once due, take the vehicle to any of our partner service centers and they’d take care of it.
+                        </p>
 
                     </div>
                 </div>
                 <div id="total" class="col-sm-12 col-md-12 col-lg-3 card">
                     <div class="card-body">
-                        <h3>total fuel card</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
+                        <h4>total fuel card</h4>
+                        <br>
+                        <br>
+                        <br>
+                        <p class="card-text">Once in a while, you may need a loan. To get new tyres or deal with an emergency. We’d be there for you.</p>
                     </div>
                 </div>
                 <div id="financial" class="col-sm-12 col-md-12 col-lg-3 card">
                     <div class="card-body">
-                        <h3>financial support</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
+                        <h4>financial support</h4>
+                        <br>
+                        <br>
+                        <p class="card-text">Ownit provides own most active users and drivers with financial aid throught business coaching and credit facilitation via our partner BOSSCOOP.</p>
                     </div>
                 </div>
             </div>
@@ -347,42 +299,42 @@ if it's not present, don't show loader */
                 <div id="" class="card col-sm-12 col-md-3 col-lg-3">
                     <div class="card-body">
                         <img class="card-img-top" src="assets/img/one.svg" alt="">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
+                        <p class="card-text">First express your interest in participating in Ownit and make a down payment</p>
 
                     </div>
                 </div>
                 <div id="" class="card col-sm-12 col-md-3 col-lg-3">
                     <div class="card-body">
                         <img class="card-img-top" src="assets/img/two.svg" alt="">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel. </p>
+                        <p class="card-text">We preforem preverification and KYC (Know Your Customer)</p>
 
                     </div>
                 </div>
                 <div id="" class="card col-sm-12 col-md-3 col-lg-3">
                     <div class="card-body">
                         <img class="card-img-top" src="assets/img/three.svg" alt="">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
+                        <p class="card-text">After we acquire the car, we'll perform inspections on it, pay for it and set it up for use</p>
 
                     </div>
                 </div>
                 <div id="" class="card col-sm-12 col-md-3 col-lg-3">
                     <div class="card-body">
                         <img class="card-img-top" src="assets/img/four.svg" alt="">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
+                        <p class="card-text">After vetting and inspections, you would come pick up the car and start driving.</p>
 
                     </div>
                 </div>
                 <div id="" class="card  col-sm-12 col-md-3 col-lg-3">
                     <div class="card-body">
                         <img class="card-img-top" src="assets/img/five.svg" alt="">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
+                        <p class="card-text">Make your scheduled weekly Payment </p>
 
                     </div>
                 </div>
                 <div id="" class="card col-sm-12 col-md-3 col-lg-3">
                     <div class="card-body">
                         <img class="card-img-top" src="assets/img/six.svg" alt="">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel.</p>
+                        <p class="card-text">After 24 months of succsessive payment, you keep the car</p>
 
                     </div>
                 </div>
@@ -390,7 +342,7 @@ if it's not present, don't show loader */
         </div>
         <div id="terms" class="terms">
             <button class="btn btn-default">
-                <a href="terms.html" class="card-text">terms and conditions</a>
+                <a href="terms.html" class="card-text">View terms and conditions</a>
 						</button>
         </div>
     </section>
@@ -412,18 +364,17 @@ if it's not present, don't show loader */
                         <h3>drive2Earn</h3>
                         <p class="card-text">This product is designed to help people looking to join Ride Sharing platforms find rental cars with they can drive for to money and return the cars after the rental expires. </p>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#drive2EARN">
-												<span class="products-toggler-icon"></span>
-												Learn More 
-										</button>
-                    </div>
+												<span class="products-toggler-icon"></span> Learn More
+            </button>
+    </div>
 
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <img class="card-img-top" src="assets/img/Coming-Soon-500x313.png" alt="">
-                    </div>
-                </div>
-            </div> -->
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <img class="card-img-top" src="assets/img/Coming-Soon-500x313.png" alt="">
+        </div>
+    </div>
+    </div> -->
             </div>
     </section>
     <!--
@@ -432,14 +383,16 @@ if it's not present, don't show loader */
 		========================================================================== 
 		-->
 
-    <div class="modal fade" id="drive2OWN" tabindex="-1" role="dialog" aria-labelledby="drive2OWNModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade " id="drive2OWN" tabindex="-1" role="dialog" aria-labelledby="drive2OWNModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <img src="assets/img/DR2OWN_logo.png" alt="">
+                    <img src="uploads/Toyota-Corolla-2018-thumbnail.jpg" alt="">
+                    <!-- <img src="uploads/Toyota-Corolla-2018.jpg" alt=""> -->
+                    <p class="car_title">Toyota Corolla 2018</p>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           							<span aria-hidden="true">&times;</span>
-        						</button>
+										</button>
                 </div>
                 <div class="modal-body">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi tempus imperdiet nulla malesuada. Lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet cursus sit amet dictum
@@ -453,8 +406,8 @@ if it's not present, don't show loader */
             </div>
         </div>
     </div>
-    <div class="modal fade" id="drive2EARN" tabindex="-1" role="dialog" aria-labelledby="drive2EARNModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade bd-example-modal-lg" id="drive2EARN" tabindex="-1" role="dialog" aria-labelledby="drive2EARNModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="drive2EARNModalCenterTitle">drive2EARN</h5>
@@ -463,9 +416,88 @@ if it's not present, don't show loader */
 										</button>
                 </div>
                 <div class="modal-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi tempus imperdiet nulla malesuada. Lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet cursus sit amet dictum
-                    sit amet justo donec. Nulla posuere sollicitudin aliquam ultrices sagittis orci a. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Etiam tempor orci eu lobortis elementum. Vel turpis nunc eget lorem. Lectus vestibulum mattis
-                    ullamcorper velit. Pharetra sit amet aliquam id diam maecenas.
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <div class="ibox product-detail">
+                                <div class="ibox-content">
+
+                                    <div class="row">
+                                        <div class="col-md-5">
+
+
+                                            <div class="product-images">
+
+                                                <div>
+
+                                                    <!-- [IMAGE 1] -->
+                                                    <img class="image-imitation" src="uploads/Toyota-Corolla-2018.jpg" alt="" srcset="">
+
+                                                </div>
+                                                <!-- <div>
+                                                    <div class="image-imitation">
+                                                        [IMAGE 2]
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="image-imitation">
+                                                        [IMAGE 3]
+                                                    </div>
+                                                </div> -->
+
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-7">
+
+                                            <h2 class="font-bold m-b-xs">
+                                                Desktop publishing software
+                                            </h2>
+                                            <small>Many desktop publishing packages and web page editors now.</small>
+                                            <div class="m-t-md">
+                                                <h2 class="product-main-price">$406,602 <small class="text-muted">Exclude Tax</small> </h2>
+                                            </div>
+                                            <hr>
+
+                                            <h4>Product description</h4>
+
+                                            <div class="small text-muted">
+                                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+
+                                                <br/>
+                                                <br/> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                            </div>
+                                            <dl class="small m-t-md">
+                                                <dt>Description lists</dt>
+                                                <dd>A description list is perfect for defining terms.</dd>
+                                                <dt>Euismod</dt>
+                                                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                                                <dt>Malesuada porta</dt>
+                                                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                                            </dl>
+                                            <hr>
+
+                                            <div>
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-sm"><i class="fa fa-cart-plus"></i> Add to cart</button>
+                                                    <button class="btn btn-white btn-sm"><i class="fa fa-star"></i> Add to wishlist </button>
+                                                    <button class="btn btn-white btn-sm"><i class="fa fa-envelope"></i> Contact with author </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- <div class="ibox-footer">
+                                    <span class="pull-right">
+																		Full stock - <i class="fa fa-clock-o"></i> 14.04.2016 10:04 pm
+																</span> The generated Lorem Ipsum is therefore always free
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -487,12 +519,12 @@ if it's not present, don't show loader */
                 <div id="loader__index"></div>
                 <div id="thanksModal" class="modal-body thanks-body">
                     <img class='thanks-body__img' src="assets/img/checked.svg" alt="">
-                    <h4 class="text-center">Thank you for registering</h4>
-                    <p class="text-center">we'll contact you as soon as the project kicks off</p>
-                    <div class="modal-footer">
+                    <h4 class="text-center">Thank you for your interest!</h4>
+                    <p class="text-center">We’d review your application and you’d receive an email from us shortly.
+                    </p>
+                    <!-- <div class="modal-footer">
                         <button id="closemodal" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                    </div>
+                    </div> -->
                 </div>
                 <div class="modal-body form-body">
                     <form id="ownItForm-main">
@@ -527,7 +559,7 @@ if it's not present, don't show loader */
                                 <select id="inputProduct" class="form-control" name='product'>
 																		<option selected>Drive2OWN</option>
 																		<!-- <option >Drive2OWN</option> -->
-																		<option disabled>Work2EARN</option>
+																		<!-- <option disabled>Work2EARN</option> -->
 																</select>
                             </div>
                         </div>
@@ -555,7 +587,7 @@ if it's not present, don't show loader */
             <!-- <button id="openmodal" type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#ownItForm">
 							Register
 						</button> -->
-            <a class="btn btn-outline-success" href="#drive2ownslider">
+            <a class="btn-register btn btn-outline-success" href="#drive2ownslider">
 								Register
 						</a>
         </div>
@@ -574,10 +606,10 @@ if it's not present, don't show loader */
                         <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#drive2OWN_actual">drive 2 OWN</a>
+                        <a class="nav-link" href="#drive2OWN_actual">drive2OWN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#drive2EARN_actual">drive 2 EARN</a>
+                        <a class="nav-link" href="#drive2EARN_actual">work2OWN</a>
                     </li>
                 </ul>
             </div>
@@ -663,24 +695,9 @@ if it's not present, don't show loader */
 		========================================================================== 
 		-->
 
-    <!-- <script src="assets/js/metisMenu/jquery.metisMenu.js"></script>
-    <script src="assets/js/slimscroll/jquery.slimscroll.min.js"></script> -->
-    <!-- Custom and plugin javascript -->
-    <!-- <script src="assets/js/inspinia.js"></script>
-    <script src="assets/js/pace/pace.min.js"></script> -->
-    <!-- Jquery Core Js -->
-    <!-- <script src="assets/bundles/libscripts.bundle.js"></script> -->
-    <!-- Lib Scripts Plugin Js -->
-    <!-- <script src="assets/bundles/vendorscripts.bundle.js"></script> -->
-    <!-- Lib Scripts Plugin Js -->
 
-    <!-- <script src="assets/bundles/mainscripts.bundle.js"></script> -->
     <!-- Custom Js -->
 
-
-
-
-    <!-- <script src="assets/plugins/jquery.min.js "></script> -->
     <script src="assets/plugins/popper.min.js "></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
 
@@ -689,16 +706,6 @@ if it's not present, don't show loader */
     <!-- slick carousel-->
     <script src="assets/js/slick/slick.min.js"></script>
     <script src="assets/js/app.js "></script>
-    <!-- <script src="assets/js/sideNav.js"></script>
-    
-		<script src="assets/js/navBarScroll.js"></script> -->
-    <!-- Additional style only for demo purpose -->
-    <!-- <style>
-        .slick_demo_2 .ibox-content {
-            margin: 0 10px;
-        }
-    </style> -->
-
     <script>
         $(document).ready(function() {
 
@@ -706,7 +713,9 @@ if it's not present, don't show loader */
             $('.slick_demo_1').slick({
                 dots: true
             });
-
+            // $('.product-images').slick({
+            //     dots: true
+            // });
             // $('.slick_demo_2').slick("unslick");
             $('.slick_demo_2').slick({
                 infinite: true,
@@ -723,13 +732,13 @@ if it's not present, don't show loader */
                         dots: true
                     }
                 }, {
-                    breakpoint: 700,
+                    breakpoint: 800,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2
                     }
                 }, {
-                    breakpoint: 480,
+                    breakpoint: 500,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1

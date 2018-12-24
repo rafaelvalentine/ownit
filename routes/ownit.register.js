@@ -1,19 +1,15 @@
 const express = require('express')
 const router = express.Router()
-
+const ensureAuthenticated = require('../helpers/Auth.js')
 const routeHelpers = require('../helpers/routeHelpers')
 
 router.route('/')
-    .get(routeHelpers.getUsers)
+    .get(ensureAuthenticated, routeHelpers.getUsers)
     .post(routeHelpers.addUser)
 
 router.route('/:userid')
     .get(routeHelpers.findUser)
-    .put(routeHelpers.updateUser)
-    .delete(routeHelpers.deleteUser)
-    // router.route('/login')
-    //     .get(routeHelpers.getAdmin)
-    //     .post(routeHelpers.addAdmin)
-
+    .put(ensureAuthenticated, routeHelpers.updateUser)
+    .delete(ensureAuthenticated, routeHelpers.deleteUser)
 
 module.exports = router

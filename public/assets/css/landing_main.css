@@ -38,6 +38,7 @@ a {
     letter-spacing: normal;
     line-height: 24px;
     text-transform: none;
+    text-decoration: none;
 }
 
 
@@ -91,6 +92,7 @@ body,
 .ownit_header .nav-link {
     text-transform: uppercase;
     font-weight: 700;
+    padding: 0;
 }
 
 .ownit_header .nav-link:hover {
@@ -99,6 +101,28 @@ body,
 
 .ownit_header .navbar-nav .nav-item.activez a {
     color: #056340 !important;
+}
+
+#ownit_header a#dashboard-a {
+    margin: 10px 0;
+    margin-left: -5px;
+    padding: 0;
+}
+
+#ownit_header .dashboard-btn {
+    border-radius: 20px !important;
+    background-color: #fbae30 !important;
+    border-color: #fbae30 !important;
+    color: #fff;
+    width: 100px;
+    font-style: inherit;
+    font-weight: 700;
+}
+
+#ownit_header .dashboard-btn:hover {
+    background-color: #fff !important;
+    border: 1px solid#fbae30 !important;
+    color: #fbae30;
 }
 
 
@@ -111,6 +135,8 @@ body,
 .banner {
     padding-bottom: 6rem;
     background-color: rgba(22, 99, 5, 1);
+    /* min-height: 90vh; */
+    /* padding-top: 5rem; */
 }
 
 .banner .banner--container {
@@ -118,6 +144,7 @@ body,
     justify-content: center;
     flex-direction: column;
     background-color: rgba(22, 99, 5, .75);
+    height: 100%;
 }
 
 .banner .jumbotron {
@@ -125,6 +152,7 @@ body,
     margin-bottom: 0;
     background-color: rgba(22, 99, 5, .2);
     border-radius: .3rem;
+    height: 100%;
 }
 
 .banner .jumbotron h1 {
@@ -197,7 +225,8 @@ body,
     display: flex;
     justify-content: center;
     /* background-color: rgba(5, 39, 99, .1); */
-    background-color: rgba(80, 175, 21, .15);
+    background-color: rgba( 5, 86, 99, .15);
+    /* background-color: rgba(80, 175, 21, .15); */
     padding: 20px 0 0;
 }
 
@@ -210,13 +239,14 @@ body,
     text-align: center;
     margin: 10px 0;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: rgb(1, 27, 51);
 }
 
 .mission hr {
-    border: .5px solid #056340;
-    width: 50px;
+    border: 2px solid #056340;
+    width: 100px;
+    border-radius: 50px;
 }
 
 .mission .card {
@@ -252,7 +282,7 @@ body,
 #drive2ownslider .col-lg-10 {
     -ms-flex: 0 0 83.333333%;
     flex: 0 0 83.333333%;
-    max-width: 95.333333%;
+    max-width: 96.333333%;
     padding-right: 20px;
     padding-left: 40px;
 }
@@ -266,7 +296,7 @@ body,
 
 #drive2ownslider h3 {
     font-weight: 500;
-    text-transform: lowercase;
+    text-transform: uppercase;
     color: rgb(1, 27, 51);
 }
 
@@ -293,13 +323,14 @@ body,
     /* max-width: 100%; */
 }
 
-#drive2ownslider .ibox-content h4 {
+#drive2ownslider .ibox-content h5 {
     margin: 15px 0 20px;
 }
 
-#drive2ownslider .ibox-content h4 span {
-    display: block;
+#drive2ownslider .ibox-content h5 span {
+    display: inline-block;
     font-style: inherit;
+    margin: 5px;
 }
 
 #drive2ownslider .ibox-content p {
@@ -352,6 +383,10 @@ body,
     height: 40px;
 }
 
+.buttons_div2 {
+    margin-top: 40px;
+}
+
 
 /* 
 ==========================================================================
@@ -362,7 +397,8 @@ body,
 #drive2own-benefits {
     display: flex;
     justify-content: center;
-    background-color: rgba(80, 175, 21, .15);
+    /* background-color: rgba(80, 175, 21, .15); */
+    background-color: rgba( 5, 86, 99, .15);
     padding: 20px 0 0;
 }
 
@@ -380,8 +416,9 @@ body,
 }
 
 .drive2own-benefits hr {
-    border: .5px solid #056340;
-    width: 50px;
+    border: 2px solid #056340;
+    width: 100px;
+    border-radius: 50px;
 }
 
 .drive2own-benefits .card {
@@ -399,14 +436,17 @@ body,
     color: #566374;
 }
 
-.drive2own-benefits .card-body h3 {
+.drive2own-benefits .card-body h4 {
     color: rgb(1, 27, 51);
     margin-bottom: 20px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
 }
 
-.drive2own-benefits .card-body h3 br {
+
+/* .drive2own-benefits .card-body h4 br {
     display: none;
-}
+} */
 
 
 /* 
@@ -437,8 +477,9 @@ body,
 }
 
 .how_it_works hr {
-    border: .5px solid #056340;
-    width: 50px;
+    border: 2px solid #056340;
+    width: 100px;
+    border-radius: 50px;
 }
 
 .how_it_works .card {
@@ -619,7 +660,16 @@ body,
 
 .modal img {
     width: 150px;
-    height: 50px;
+    height: 70px;
+}
+
+#drive2OWN .modal-content .modal-header img {
+    width: 150px;
+    height: 80px;
+}
+
+.car-title {
+    margin: 10px;
 }
 
 .modal .btn-primary {
@@ -847,9 +897,31 @@ footer p {
 @media screen and (min-width: 700px) and (max-width:1023px) {
     /* 
 		==========================================================================
+   Navigation
+  	========================================================================== 
+    */
+    #ownit_header a#dashboard-a {
+        margin: 5px 0;
+        margin-left: -5px;
+        padding: 0;
+    }
+    /* 
+		==========================================================================
    	Bannner
   	========================================================================== 
-	*/
+    */
+    /* .banner {
+        padding-bottom: 6rem;
+        background-color: rgba(22, 99, 5, 1);
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-image: url("../img/OWNiT.png");
+        background-position: right bottom;
+        background-attachment: fixed;
+        min-height: 90vh;
+        padding-top: 5rem;
+    } */
     .banner .card .two {
         display: inline;
     }
@@ -982,7 +1054,7 @@ footer p {
     #drive2ownslider .col-lg-10 {
         -ms-flex: 0 0 83.333333%;
         flex: 0 0 83.333333%;
-        max-width: 95.333333%;
+        max-width: 94.333333%;
         padding-right: 15px;
         padding-left: 50px;
     }
@@ -993,6 +1065,32 @@ footer p {
 }
 
 @media screen and (min-width: 1024px) {
+    /* 
+		==========================================================================
+   Navigation
+  	========================================================================== 
+    */
+    #ownit_header a#dashboard-a {
+        margin: -5px;
+        padding: 0;
+    }
+    /* 
+	  ==========================================================================
+   	Banner
+	  ========================================================================== 
+   */
+    .banner {
+        padding-bottom: 6rem;
+        background-color: rgba(22, 99, 5, 1);
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-image: url("../img/OWNiT.png");
+        background-position: right bottom;
+        background-attachment: fixed;
+        /* min-height: 90vh; */
+        /* padding-top: 5rem; */
+    }
     /* 
 	  ==========================================================================
    	Navigation
@@ -1019,16 +1117,16 @@ footer p {
     }
     .banner .jumbotron {
         align-self: center;
-        padding: 5rem;
+        padding: 3rem;
         margin-bottom: 0;
         background-color: rgba(22, 99, 5, .2);
         border-radius: .3rem;
-        margin-top: -100px;
+        margin-top: 0;
     }
     .banner .card .three {
         display: inline;
-        /* height: 100%;
-        width: 100%; */
+        height: 100%;
+        /*width: 100%; */
     }
     .banner .card .one,
     .banner .card .two {
@@ -1087,7 +1185,7 @@ footer p {
     #drive2ownslider .col-lg-10 {
         -ms-flex: 0 0 83.333333%;
         flex: 0 0 83.333333%;
-        max-width: 95.333333%;
+        max-width: 96.333333%;
         padding-right: 15px;
         padding-left: 70px;
     }
@@ -1134,7 +1232,6 @@ footer p {
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-image: url("../img/OWNiT.png");
-        background-repeat: no-repeat;
         background-position: right bottom;
         background-attachment: fixed;
     }
@@ -1178,3 +1275,436 @@ footer p {
         color: #566374;
     }
 }
+
+
+/* 
+==========================================================================
+  Buttons CSS
+========================================================================== 
+*/
+
+
+/* .buttons_div {
+    display: flex;
+    justify-content: space-between;
+} */
+
+button.learn-more {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    margin-bottom: 5px;
+}
+
+button.learn-more {
+    width: 100%;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    margin: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(5, 39, 99, .75);
+    border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.4rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: '';
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: rgba(5, 39, 99, .75);
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+button#learn-more:hover .circle {
+    width: 100%;
+}
+
+button#learn-more:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button#learn-more:hover .button-text {
+    color: #fff;
+}
+
+@supports (display: grid) {
+    /* body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.625rem;
+    grid-template-areas: ". main main ." ". main main .";
+  } */
+    /* #container-button {
+         grid-area: main;
+         align-self: center;
+         justify-self: center;
+     } */
+}
+
+.button-click {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    padding: 0;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    font-size: .8rem;
+    color: #F0F0F0;
+    border-radius: 20px;
+    /* border: 2px solid #1f7d5b; */
+    border: transparent;
+    border-bottom: 4px solid #056340;
+    box-shadow: 6px 6px 6px #999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-align: center;
+    /* background: #1f7d5b; */
+    background: -webkit-linear-gradient(#1f7d5b, #056340);
+    background: -o-linear-gradient(#1f7d5b, #056340);
+    background: -moz-linear-gradient(#1f7d5b, #056340);
+    background: linear-gradient(#1f7d5b, #056340);
+    -webkit-transition: background 0.05s linear;
+    -moz-transition: background 0.05s linear;
+    -o-transition: background 0.05s linear;
+    transition: background 0.05s linear;
+    background-size: 1px 200px;
+    transition: all .05s linear;
+}
+
+.button-click {
+    background-position: 100px;
+}
+
+.button-click:hover,
+.button-click:active {
+    box-shadow: 2px 2px 2px #777;
+    border-bottom: 1px solid #056340;
+    transform: translateY(3px);
+    background: -webkit-linear-gradient(#1f7d5b, #056340);
+    background: -o-linear-gradient(#1f7d5b, #056340);
+    background: -moz-linear-gradient(#1f7d5b, #056340);
+    background: linear-gradient(#1f7d5b, #056340);
+}
+
+#slick_demo_2 .card {
+    float: left;
+    width: 100%;
+    margin: 0 10px;
+}
+
+#slick_demo_2 .card .menu-content {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#slick_demo_2 .card .menu-content::before,
+#slick_demo_2 .card .menu-content::after {
+    content: '';
+    display: table;
+}
+
+#slick_demo_2 .card .menu-content::after {
+    clear: both;
+}
+
+#slick_demo_2 .card .menu-content li {
+    display: inline-block;
+}
+
+#slick_demo_2 .card .menu-content a {
+    color: #fff;
+}
+
+#slick_demo_2 .card .menu-content span {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Open Sans';
+    transform: translate(-50%, 0);
+}
+
+#slick_demo_2 .card .wrapper {
+    padding: 0;
+    background-color: #fff;
+    min-height: 540px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+#slick_demo_2 .card .wrapper:hover .data {
+    transform: translateY(0);
+}
+
+#slick_demo_2 .card .data {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(calc( 180px + 1rem));
+    transition: transform 0.3s;
+}
+
+#slick_demo_2 .card .data .content {
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+    /* margin-bottom: 10px; */
+    overflow: auto;
+    /* padding-bottom: 10px; */
+}
+
+#slick_demo_2 .card .data .content::-webkit-scrollbar {
+    width: 10px;
+}
+
+#slick_demo_2 .card .author {
+    font-size: 12px;
+}
+
+#slick_demo_2 .card .title {
+    margin-top: 10px;
+}
+
+#slick_demo_2 .card .text {
+    height: 70px;
+    margin: 0;
+}
+
+#slick_demo_2 .card input[type='checkbox'] {
+    display: none;
+}
+
+#slick_demo_2 .card input[type='checkbox']:checked+.menu-content {
+    transform: translateY(-60px);
+}
+
+
+/* #slick_demo_2 .car-card .wrapper {
+    background: url(../../../uploads/Toyota-Corolla-2018.jpg) 15% 1% / cover no-repeat;
+} */
+
+#slick_demo_2 .car-card .wrapper {
+    background: 15% 1% / cover no-repeat;
+}
+
+#slick_demo_2 .car-card .date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #77d7b9;
+    color: #fff;
+    padding: 0.8em;
+}
+
+#slick_demo_2 .car-card .date span {
+    display: block;
+    text-align: center;
+}
+
+#slick_demo_2 .car-card .date .day {
+    font-weight: 700;
+    font-size: 24px;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18);
+}
+
+#slick_demo_2 .car-card .date .month {
+    text-transform: uppercase;
+}
+
+#slick_demo_2 .car-card .date .month,
+#slick_demo_2 .car-card .date .year {
+    font-size: 12px;
+}
+
+#slick_demo_2 .car-card .content {
+    background-color: #fff;
+    box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+}
+
+#slick_demo_2 .car-card .title a {
+    color: #808080;
+}
+
+#slick_demo_2 .car-card .menu-button {
+    position: absolute;
+    z-index: 999;
+    top: 16px;
+    right: 16px;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#slick_demo_2 .car-card .menu-button span {
+    width: 5px;
+    height: 5px;
+    background-color: #808080;
+    color: #808080;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#slick_demo_2 .car-card .menu-button span::after,
+#slick_demo_2 .car-card .menu-button span::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: currentColor;
+    position: absolute;
+    border-radius: 50%;
+}
+
+#slick_demo_2 .car-card .menu-button span::before {
+    left: -10px;
+}
+
+#slick_demo_2 .car-card .menu-button span::after {
+    right: -10px;
+}
+
+#slick_demo_2 .car-card .menu-content {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    transition: transform 0.3s;
+    transform: translateY(0);
+}
+
+#slick_demo_2 .car-card .menu-content li {
+    width: 33.33333%;
+    float: left;
+    background-color: #77d7b9;
+    height: 60px;
+    position: relative;
+}
+
+#slick_demo_2 .car-card .menu-content a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+#slick_demo_2 .car-card .menu-content span {
+    top: -10px;
+}
+
+@media screen and (min-width:300px) {
+    #slick_demo_2 .card .data {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(calc( 250px + 1rem));
+        transition: transform 0.3s;
+    }
+    .button-click {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:700px) {
+    #slick_demo_2 .card .data {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(calc( 200px + 1rem));
+        transition: transform 0.3s;
+    }
+    #slick_demo_2 .car-card .car br {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1025px) {
+    #slick_demo_2 .card .data {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(calc( 150px + 1rem));
+        transition: transform 0.3s;
+    }
+    #slick_demo_2 .car-card .car br {
+        display: none;
+    }
+    button.learn-more {
+        width: 10rem;
+        height: auto;
+    }
+    .button-click {
+        margin-left: 10px;
+        /* width: 200px; */
+    }
+    .buttons_div {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+/* @media screen and (max-width:1024px){
+
+} */

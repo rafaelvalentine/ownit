@@ -57,84 +57,12 @@ exports.addAdmin = function(req, res, next) {
         .catch((err) => {
             res.send(err)
         })
-        // confirm that user typed same password twice
-        //     if (req.body.password !== req.body.passwordConf) {
-        //         let err = new Error('Passwords do not match.')
-        //         err.status = 400
-        //         res.send('passwords dont match')
-        //         return next(err)
-        //     }
-
-    //     if (req.body.email &&
-    //         req.body.username &&
-    //         req.body.password &&
-    //         req.body.passwordConf) {
-    //         var userData = {
-    //             email: req.body.email,
-    //             username: req.body.username,
-    //             password: req.body.password,
-    //             passwordConf: req.body.passwordConf
-    //         }
-
-    //         database.Admins.create(userData, function(error, user) {
-    //             if (error) {
-    //                 return next(error)
-    //             } else {
-    //                 req.session.userId = user._id
-    //                     // return res.redirect('/dashboard')
-    //                 return res.send('dashboard')
-    //             }
-    //         })
-
-    //     } else if (req.body.logemail && req.body.logpassword) {
-    //         database.Admins.authenticate(req.body.logemail, req.body.logpassword, function(error, user) {
-    //             if (error || !user) {
-    //                 let err = new Error('Wrong email or password.')
-    //                 err.status = 401
-    //                 return next(err)
-    //             } else {
-    //                 req.session.userId = user._id
-    //                 return res.redirect('/profile')
-    //             }
-    //         })
-    //     } else {
-    //         let err = new Error('All fields required.')
-    //         err.status = 400
-    //         return next(err)
-    //     }
 }
 
-// exports.loggedAdmin = function(req, res, next) {
-//     database.Admins.findById(req.session.userId)
-//         .exec(function(error, user) {
-//             if (error) {
-//                 return next(error)
-//             } else {
-//                 if (user === null) {
-//                     let err = new Error('Not authorized! Go back!')
-//                     err.status = 400
-//                     return next(err)
-//                 } else {
-//                     return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
-//                 }
-//             }
-//         })
-// }
 
-// exports.logoutAdmin = function(req, res, next) {
-//     if (req.session) {
-//         // delete session object
-//         req.session.destroy(function(err) {
-//             if (err) {
-//                 return next(err)
-//             } else {
-//                 return res.redirect('/')
-//             }
-//         })
-//     }
-// }
 exports.getCars = function(req, res) {
     database.Car.find()
+        .sort({ year: 'asc' })
         .then((cars) => {
             res.json(cars)
         })
@@ -145,6 +73,7 @@ exports.getCars = function(req, res) {
 exports.addCar = (req, res) => {
 
     console.log(req.file)
+    console.log(req.file)
     database.Car.create({
             make: req.body.make,
             model: req.body.model,
@@ -154,8 +83,6 @@ exports.addCar = (req, res) => {
             weeklypayment: req.body.weeklypayment
         })
         .then((newcar) => {
-            // let alert = document.getElementById('alert-msg')
-            // res.json(newcar)
             res.redirect('/drive2own_cars')
             console.log(newcar)
         })
@@ -189,7 +116,7 @@ exports.updateCar = (req, res) => {
         }, { new: true })
         .then((foundcar) => {
             res.redirect('/drive2own_cars')
-                // res.json(foundcar)
+
 
         })
         .catch((err) => {

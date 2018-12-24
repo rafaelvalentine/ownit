@@ -67,13 +67,6 @@ $(document).ready(function() {
         console.log(`you want to edit : ${car} ${year}`)
         console.log('full details : ' + JSON.stringify(edittedCar))
         $('#car_details').text(` : ${car} ${year}`)
-            // $('#editCarImage').val(image)
-            // $('#editCarImage').prop('disabled', true)
-            // $('#editMake').val(make)
-            // $('#editModel').val(model)
-            // $('#editYear').val(year)
-            // $('#editDownPayment').val(down)
-            // $('#editWeeklyPayment').val(weekly)
         $('#deleteCarForm').attr('action', `/api/cars/${carId}?_method=DELETE`)
 
         console.log($('#deleteCarForm').attr('action'))

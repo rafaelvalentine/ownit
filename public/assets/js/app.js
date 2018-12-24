@@ -99,7 +99,7 @@ $(document).ready(function() {
     })
 
     $('#slick_demo_2').on('click', '.sign_up', function() {
-        const selectedCar = $(this).closest('div').attr('car')
+        const selectedCar = $(this).closest('.car').attr('car')
             // let car = selectedCar.data('car')
             // console.log(car)
         let car = $('#car')
@@ -120,7 +120,22 @@ $(document).ready(function() {
             loading.hide()
         })
 })
-
+$('#table').on('click', '.send_message', function() {
+    const currectUser = $(this).closest('tr')
+    let user = currectUser.data('name').toUpperCase()
+    let car = currectUser.data('car').toUpperCase()
+    let form = 'https://goo.gl/forms/5odUOH3FtNIGvy1Q2'
+    $('#ownit-message-area').val(`Hi ${user},
+	Thank You for choosing OWNIT and showing increase in our ${car} offering, you have passed the first stage of the registration, please kindly follow this link: ${form} 
+	to finalise you registration. Thank you again for choosing OWNIT Africa!`)
+    $('#ownit-message-area').prop('disabled', true)
+    $('#edit-message').prop('disabled', false)
+    $("#edit-message").prop("checked", false);
+})
+$('#edit-message').click(() => {
+    $('#ownit-message-area').prop('disabled', false)
+    $('#edit-message').prop('disabled', true)
+})
 const getUsers = (users) => {
     // add users to page
     users.map((user) => {
@@ -156,7 +171,7 @@ function getUser(user) {
         // '<span>' + '<i class="fa fa-product-hunt"></i> ' + user.date + '</span>' +
         // '</td>' +
         '<td>' +
-        '<button data-target="#editModal" type="button" class="btn btn-primary btn-sm edit" title="Text"><i class="fa fa-comment"></i></button> ' +
+        '<button data-toggle="modal" data-target="#text_message" type="button" class="btn btn-primary btn-sm send_message" title="Text"><i class="fa fa-comment"></i></button> ' +
         '<button data-target="#editModal" type="button" class="btn btn-info btn-sm edit" title="Edit"><i class="fa fa-edit"></i></button> ' +
         '<button type="button" data-type="confirm" class="btn btn-danger js-sweetalert btn-sm delete" title="Delete"><i class="fa fa-trash"></i></button> ' +
         '</td>' +
@@ -167,29 +182,50 @@ function getUser(user) {
     newUser.data('last', user.lastname)
     newUser.data('email', user.email)
     newUser.data('number', user.number)
+    newUser.data('car', user.car)
     $('#table').append(newUser)
 }
 
+function changeupload(upload) {
+    return upload.split('').map(a => a === '\\' ? '/' : a).join('')
+}
+
 function getCar(car) {
-    let newCar = $('<div  >' +
-        '<div car="' + `${car.make} ${car.model} ${car.year}` + '" class="ibox-content product-box">' +
-        '<img class="card-img-top" src="' + car.carImage + '" alt="Card image cap">' +
-        '<h4>' +
-        '<span class="make_model">' + `${car.make} ${car.model}` + '</span>' +
-        '<span>' + car.year + '</span>' +
-        '</h4>' +
-        '<p>' +
-        'down payment: N ' + car.downpayment +
-        '</p>' +
-        '<p>' +
-        'weekly payment: N ' + car.weeklypayment +
-        '</p>' +
-        '<button type="button" class="btn btn-primary more" data-toggle="modal" data-target="#drive2OWN">' +
-        'Learn More' +
-        '</button> ' +
-        ' <button type="button" class="btn btn-primary sign_up" data-toggle="modal" data-target="#ownItForm" data-dismiss="modal">sign up</button>' +
+    let image = changeupload(car.carImage)
+    let newCar = $('<div class="car-card card">' +
+        '<div class="wrapper" style="background-image: url(' + image + ');">' +
+        ' <div class="date">' +
+        `<span class="day">${car.make}</span>` +
+        `<span class="month">${car.model}</span>` +
+        `  <span class="year">${car.year}</span>` +
         '</div>' +
-        '</div>')
+        '<div class="data">' +
+        '<div class="content">' +
+        ' <span class="author">Available</span>' +
+        '<div class="car" car="' + `${car.make} ${car.model} ${car.year}` + '">' +
+        '<h5>' +
+        ` <span> ${car.make} ${car.model} </span>` +
+        `<span>${car.year}</span>` +
+        '</h5>' +
+        `<p>Downpayment: <br> N ${car.downpayment}</p>` +
+        `<p> Weeklypayment: <br> N ${car.weeklypayment}</p>` +
+        '<div class="buttons_div buttons_div2">' +
+        '<div id="container-button">' +
+        '<button id="learn-more" data-toggle="modal" data-target="#drive2EARN" class="learn-more" type="button">' +
+        '<div class="circle">' +
+        '<span class="icon arrow"></span>' +
+        ' </div>' +
+        ' <p class="button-text">Learn More</p>' +
+        '</button>' +
+        '</div>' +
+        '<button type="button" class="btn btn-primary sign_up button-click" data-toggle="modal" data-target="#ownItForm" data-dismiss="modal">sign up</button>' +
+        ' </div>' +
+        ' </div>' +
+        ' </div>' +
+        '</div>' +
+        '</div>' +
+        ' </div>')
+
     $('.slick_demo_2').slick('slickAdd', newCar)
 }
 const addUser = (event) => {

@@ -4,19 +4,19 @@ const path = require('path')
 const bcrypt = require('bcryptjs')
 const passpost = require('passport')
 const routeHelpers = require('../helpers/routeHelpers')
+const ensureAuthenticated = require('../helpers/Auth.js')
 
 
 // Load Admin Model
 const database = require('../models')
     // GET route for admins to view dashboard
 router.route('/dashboard')
-    .get((req, res) => {
+    .get(ensureAuthenticated, (req, res) => {
         res.sendFile(path.join(__dirname, '../views', 'dashboard.html'))
-
     })
     // GET route for admins to view dashboard
 router.route('/drive2own_cars')
-    .get((req, res) => {
+    .get(ensureAuthenticated, (req, res) => {
         res.sendFile(path.join(__dirname, '../views', 'drive2own_cars.html'))
 
     })
@@ -25,17 +25,20 @@ router.route('/login')
     .get((req, res) => {
         res.sendFile(path.join(__dirname, '../views', 'sign-in.html'))
     })
-    .post((req, res) => {
-        console.log()
-
+    .post((req, res, next) => {
+        passpost.authenticate('local', {
+            successRedirect: '/dashboard',
+            failureRedirect: '/login',
+            failureFlash: true
+        })(req, res, next)
     })
 
 // admin resgistration POST
 router.route('/register')
-    .get((req, res) => {
+    .get(ensureAuthenticated, (req, res) => {
         res.sendFile(path.join(__dirname, '../views', 'sign-up.html'));
     })
-    .post((req, res) => {
+    .post(ensureAuthenticated, (req, res) => {
         let newAdmin = new database.Admins({
             username: req.body.username,
             email: req.body.email,
@@ -50,12 +53,13 @@ router.route('/register')
                         res.redirect('/login')
                     })
                     .catch(err => {
+                        res.redirect('/register')
                         console.log(err)
                     })
             })
         })
     })
-    // .post(routeHelpers.addAdmin)
+
 
 
 
@@ -65,7 +69,11 @@ router.route('/register')
 // GET route after registering
 // router.get('/dashboard', routeHelpers.loggedAdmin)
 
-// // GET for logout logout
-// router.get('/logout', routeHelpers.logoutAdmin)
+// GET for logout logout
+router.get('/logout', (req, res) => {
+    req.logOut();
+    console.log('you are logged out')
+    res.redirect('/login')
+})
 
 module.exports = router

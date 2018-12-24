@@ -1,8 +1,6 @@
 <!doctype html>
 <html class="no-js " lang="en">
 
-<!-- Mirrored from thememakker.com/wrap-theme/square/html/light/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Sep 2018 01:46:55 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -66,7 +64,7 @@
             <div class="container">
                 <div class="col-md-12 content-center">
                     <div class="card-plain">
-                        <form class="form">
+                        <form method="POST" action="/login" class="form">
                             <div class="header">
                                 <div class="logo-container expandUp">
                                     <img src="../assets/images/logo.svg" alt="">
@@ -75,18 +73,18 @@
                             </div>
                             <div class="content">
                                 <div class="input-group">
-                                    <input name="loginUsername" type="text" class="form-control" placeholder="Enter User Name">
+                                    <input name="loginEmail" type="text" class="form-control" placeholder="Enter Email">
                                     <span class="input-group-addon">
                                     <i class="zmdi zmdi-account-circle"></i>
                                 </span>
                                 </div>
                                 <div class="input-group">
-                                    <input name="loginPassword" type="password" placeholder="Password" class="form-control" />
+                                    <input name="password" type="password" placeholder="Password" class="form-control" />
                                     <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
                                 </div>
                             </div>
                             <div class="footer">
-                                <a href="/dashboard" class="btn btn-primary btn-round btn-lg btn-block ">SIGN IN</a>
+                                <button class="btn btn-primary btn-round btn-lg btn-block ">SIGN IN</button>
                                 <h5><a href="forgot-password.html" class="link">Forgot Password?</a></h5>
                             </div>
                         </form>

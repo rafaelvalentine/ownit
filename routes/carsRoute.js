@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const database = require('../models')
+const ensureAuthenticated = require('../helpers/Auth.js')
 const routeHelpers = require('../helpers/routeHelpers')
 const multer = require('multer')
 const storage = multer.diskStorage({
@@ -27,12 +28,12 @@ const uploads = multer({
 })
 router.route('/')
     .get(routeHelpers.getCars)
-    .post(uploads.single('carImage'), routeHelpers.addCar)
+    .post(ensureAuthenticated, uploads.single('carImage'), routeHelpers.addCar)
 
 router.route('/:carid')
     .get(routeHelpers.findCar)
-    .put(uploads.single('carImage'), routeHelpers.updateCar)
-    .delete(routeHelpers.deleteCar)
+    .put(ensureAuthenticated, uploads.single('carImage'), routeHelpers.updateCar)
+    .delete(ensureAuthenticated, routeHelpers.deleteCar)
 
 
 module.exports = router
