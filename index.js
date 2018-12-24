@@ -65,9 +65,6 @@ app.get('/', (req, res) => {
     res.sendFile('index.html')
 })
 
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/sign-up.html'))
-})
 
 
 app.use('/api/ownit', ownitRoute)
