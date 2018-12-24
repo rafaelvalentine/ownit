@@ -211,7 +211,7 @@ function getCar(car) {
         `<p> Weeklypayment: <br> N ${car.weeklypayment}</p>` +
         '<div class="buttons_div buttons_div2">' +
         '<div id="container-button">' +
-        '<button id="learn-more" data-toggle="modal" data-target="#drive2EARN" class="learn-more" type="button">' +
+        '<button id="learn-more" data-toggle="modal" data-target="" class="learn-more" type="button">' +
         '<div class="circle">' +
         '<span class="icon arrow"></span>' +
         ' </div>' +
