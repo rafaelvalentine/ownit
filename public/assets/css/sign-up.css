@@ -119,8 +119,14 @@ input[id^="register"].form-control.valid {
     padding-bottom: 25px !important;
 }
 
-#registerForm #registerFormButton {
+#registerForm #registerFormButton,
+#loginForm button {
     background: rgba(22, 99, 5, .85)
+}
+
+.authentication .footer .copyright span a {
+    color: #056340;
+    font-weight: 600;
 }
 
 .navbar {
