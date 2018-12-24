@@ -65,8 +65,6 @@ app.get('/', (req, res) => {
     res.sendFile('index.html')
 })
 
-
-
 app.use('/api/ownit', ownitRoute)
 app.use('/api/cars', carRoute)
 app.use('/', adminRoute)
