@@ -205,7 +205,7 @@ function getCar(car) {
         '<div class="car" car="' + `${car.make} ${car.model} ${car.year}` + '">' +
         '<h5>' +
         ` <span> ${car.make} ${car.model} </span>` +
-        `<span>${car.year}</span>` +
+        `<span class="car-year">${car.year}</span>` +
         '</h5>' +
         `<p>Downpayment: <br> N ${car.downpayment}</p>` +
         `<p> Weeklypayment: <br> N ${car.weeklypayment}</p>` +

@@ -103,12 +103,6 @@ body,
     color: #056340 !important;
 }
 
-#ownit_header a#dashboard-a {
-    margin: 10px 0;
-    margin-left: -5px;
-    padding: 0;
-}
-
 #ownit_header .dashboard-btn {
     border-radius: 20px !important;
     background-color: #fbae30 !important;
@@ -252,7 +246,7 @@ body,
 .mission .card {
     margin: .5rem;
     padding: 2rem 0 3rem;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 90% !important;
 }
 
@@ -424,7 +418,7 @@ body,
 .drive2own-benefits .card {
     margin: .5rem;
     padding: 3rem 0 5rem;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 90% !important;
 }
 
@@ -485,7 +479,7 @@ body,
 .how_it_works .card {
     margin: .5rem .5rem 1.5rem;
     padding: 3rem 0 5rem;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 90% !important;
     position: relative;
     border: 1px solid rgba(80, 175, 21, .25);
@@ -585,7 +579,7 @@ body,
 .products .card {
     margin: .5rem 0;
     padding: 5rem 0 4rem;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 90% !important;
 }
 
@@ -894,14 +888,32 @@ footer p {
     }
 }
 
-@media screen and (min-width: 700px) and (max-width:1023px) {
+@media screen and (min-width:480) {
     /* 
 		==========================================================================
    Navigation
   	========================================================================== 
     */
     #ownit_header a#dashboard-a {
-        margin: 5px 0;
+        margin: 10px 0;
+        margin-left: -5px;
+        padding: 0;
+    }
+    /* a#dashboard-a {
+        margin: -8px 0 0;
+        margin-left: 0px;
+        padding: 0;
+    } */
+}
+
+@media screen and (min-width: 700px) and (max-width:1023px) {
+    /* 
+		==========================================================================
+   Navigation
+  	========================================================================== 
+    */
+    a#dashboard-a {
+        margin: 0;
         margin-left: -5px;
         padding: 0;
     }
@@ -1070,8 +1082,9 @@ footer p {
    Navigation
   	========================================================================== 
     */
-    #ownit_header a#dashboard-a {
-        margin: -5px;
+    a#dashboard-a {
+        margin: -8px 0 0;
+        margin-left: 0px;
         padding: 0;
     }
     /* 
@@ -1653,13 +1666,27 @@ button#learn-more:hover .button-text {
     top: -10px;
 }
 
-@media screen and (min-width:300px) {
+@media screen and (min-width:300px) and (max-width:699px) {
+    #slick_demo_2 .card .wrapper {
+        padding: 0;
+        background-color: #fff;
+        min-height: 440px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+    }
+    #slick_demo_2 .card .wrapper span.car-year {
+        display: block;
+    }
     #slick_demo_2 .card .data {
         position: absolute;
         bottom: 0;
         width: 100%;
         transform: translateY(calc( 250px + 1rem));
         transition: transform 0.3s;
+    }
+    #slick_demo_2 .card .wrapper:hover .data {
+        transform: translateY(0);
     }
     .button-click {
         width: 100%;
@@ -1676,6 +1703,9 @@ button#learn-more:hover .button-text {
     }
     #slick_demo_2 .car-card .car br {
         display: none;
+    }
+    .button-click {
+        width: 100%;
     }
 }
 
@@ -1701,6 +1731,9 @@ button#learn-more:hover .button-text {
     .buttons_div {
         display: flex;
         justify-content: space-around;
+    }
+    .button-click {
+        width: 100%;
     }
 }
 
