@@ -1,26 +1,24 @@
 $(document).ready(function() {
-    /*
-   ==========================================================================
-      Gets All Cars in the database on page Load
-   ==========================================================================
-		*/
+
+
+    /**
+     *Gets All Cars in the database on page Load
+     */
+
     $.getJSON('/api/cars')
         .then(getCars)
 
-    /*
-   ==========================================================================
-       Gets All Users in the database on page Load
-   ==========================================================================
-		*/
+
+    /**
+     * Gets All Users in the database on page Load
+     */
 
     $.getJSON('/api/ownit')
         .then(getUsers)
 
-    /*
-       ==========================================================================
-            Make PUT for Users into the database
-       ==========================================================================
-      	*/
+    /**
+     *Make PUT for Users into the database
+     */
     $('#table').on('click', '.edit', function() {
         const currectUser = $(this).closest('tr')
         let user = currectUser.data('name')
@@ -89,11 +87,11 @@ $(document).ready(function() {
         })
     })
 
-    /*
-           ==========================================================================
-           Make DELETE request for Users into the database
-           ==========================================================================
-           */
+
+    /**
+     *Make DELETE request for Users into the database
+     */
+
     $('#table').on('click', '.delete', function() {
         deleteUser($(this).closest('tr'))
     })
@@ -120,18 +118,72 @@ $(document).ready(function() {
             loading.hide()
         })
 })
-$('#table').on('click', '.send_message', function() {
+
+/**
+ *Gets data from socet.io
+ */
+const socket = io();
+socket.on('smsStatus', function(data) {
+    $('.message_sent').text(' text message sent to ' + data.number)
+})
+
+$('#table').on('click', '.enter_message', function() {
     const currectUser = $(this).closest('tr')
-    let user = currectUser.data('name').toUpperCase()
-    let car = currectUser.data('car').toUpperCase()
+    let user = currectUser.data('first').toUpperCase()
+        // let car = currectUser.data('car').toUpperCase()
     let form = 'https://goo.gl/forms/5odUOH3FtNIGvy1Q2'
-    $('#ownit-message-area').val(`Hi ${user},
-	Thank You for choosing OWNIT and showing increase in our ${car} offering, you have passed the first stage of the registration, please kindly follow this link: ${form} 
-	to finalise you registration. Thank you again for choosing OWNIT Africa!`)
+    let message = $('#ownit-message-area').val(`Hello ${user}, You're almost done, Click the link: ${form} to complete your registration. Season greetings from Ownit-Africa`)
+    let number = currectUser.data('number')
+    let messageLength = message.val().length
+    $('.character-count-current').text(messageLength)
+    $('.character-count-current').removeClass('red')
     $('#ownit-message-area').prop('disabled', true)
     $('#edit-message').prop('disabled', false)
-    $("#edit-message").prop("checked", false);
+    $('#edit-message').prop('checked', false)
+    $('.send_message').prop('disabled', false)
+    $('.message_sent').text('')
+    $('.send_message').click(() => {
+        $.ajax({
+                url: '/users/sms',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ message: message.val(), number: number })
+            })
+            .then(data => {
+                console.log(data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    })
+    $('#ownit-message-area').change(function() {
+        let messageLength = message.val().length
+        $('.character-count-current').text(messageLength)
+        if (messageLength >= '175') {
+            $('.character-count-current').addClass('red')
+            $('.send_message').prop('disabled', true)
+        } else {
+            $('.character-count-current').removeClass('red')
+            $('.send_message').prop('disabled', false)
+        }
+
+    })
+    $('#ownit-message-area').keypress(function() {
+        let messageLength = message.val().length
+        $('.character-count-current').text(messageLength)
+        if (messageLength >= '175') {
+            $('.character-count-current').addClass('red')
+            $('.send_message').prop('disabled', true)
+        } else {
+            $('.character-count-current').removeClass('red')
+            $('.send_message').prop('disabled', false)
+        }
+    });
 })
+
+
+
+
 $('#edit-message').click(() => {
     $('#ownit-message-area').prop('disabled', false)
     $('#edit-message').prop('disabled', true)
@@ -171,7 +223,7 @@ function getUser(user) {
         // '<span>' + '<i class="fa fa-product-hunt"></i> ' + user.date + '</span>' +
         // '</td>' +
         '<td>' +
-        '<button data-toggle="modal" data-target="#text_message" type="button" class="btn btn-primary btn-sm send_message" title="Text"><i class="fa fa-comment"></i></button> ' +
+        '<button data-toggle="modal" data-target="#text_message" type="button" class="btn btn-primary btn-sm enter_message" title="Text"><i class="fa fa-comment"></i></button> ' +
         '<button data-target="#editModal" type="button" class="btn btn-info btn-sm edit" title="Edit"><i class="fa fa-edit"></i></button> ' +
         '<button type="button" data-type="confirm" class="btn btn-danger js-sweetalert btn-sm delete" title="Delete"><i class="fa fa-trash"></i></button> ' +
         '</td>' +

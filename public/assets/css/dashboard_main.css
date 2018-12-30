@@ -43,7 +43,22 @@ address {
     border-color: rgba(22, 99, 5, .9);
 } */
 
-@media screen and (min-width: 700px) {
+.character-count {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.character-count span {
+    margin: 0 2px;
+}
+
+.red {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.red @media screen and (min-width: 700px) {
     /* 
 ==========================================================================
   Add-Car

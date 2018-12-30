@@ -6,11 +6,16 @@ const app = express()
 const path = require('path')
 const passport = require('passport')
 const session = require('express-session')
-    // const MongoStore = require('connect-mongo')(session)
+const Nexmo = require('nexmo')
+const socketio = require('socket.io')
+
+
+// const MongoStore = require('connect-mongo')(session)
 let port = process.env.PORT;
 if (port == null || port == "") {
     port = 6060;
 }
+
 
 
 var db = require('./models/index')
@@ -46,9 +51,9 @@ app.use(session({
 }))
 
 // passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
-// app.use(flash());
+app.use(passport.initialize())
+app.use(passport.session())
+    // app.use(flash());
 
 //Global variables
 // app.use(function(req, res, next) {
@@ -60,15 +65,68 @@ app.use(passport.session());
 // });
 
 
-// // GET route for reading data
+/**
+ *  GET route for Landing Page
+ */
 app.get('/', (req, res) => {
     res.sendFile('index.html')
 })
 
+/**
+ * Imported Routes
+ */
 app.use('/api/ownit', ownitRoute)
 app.use('/api/cars', carRoute)
 app.use('/', adminRoute)
 
 
+// Start Server
 
-app.listen(port)
+const server = app.listen(port)
+
+
+/** 
+ *  Connect to Socket.io
+ */
+
+const io = socketio(server)
+io.on('connection', client => {
+    console.log('Connected!')
+    client.on('disconnect', () => {
+        console.log('Disconnected')
+    })
+})
+
+
+/**
+ * Call Nexom function
+ */
+const nexmo = new Nexmo({
+    apiKey: '968450f6',
+    apiSecret: 'OOUL9xBiQWLIEXB0'
+}, { debug: true })
+
+
+//Catch SMS from DASHBOARD
+app.post('/users/sms', (req, res) => {
+    const from = 'Ownit-Africa'
+    const to = req.body.number
+    const text = req.body.message
+    nexmo.message.sendSms(from, to, text, (err, responseData) => {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log('this is the responseData:', responseData)
+                // get Data for response
+
+            const data = {
+                id: responseData.messages[0]['message-id'],
+                number: responseData.messages[0]['to']
+            }
+
+            //Emit to client
+            io.emit('smsStatus', data)
+        }
+    })
+
+})

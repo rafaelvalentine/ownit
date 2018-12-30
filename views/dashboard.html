@@ -649,6 +649,7 @@
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <div class="form-line">
+
                                                     <textarea id="ownit-message-area" rows="4" class="form-control no-resize" placeholder="Please enter Message...">
 																										
 																										</textarea>
@@ -657,7 +658,12 @@
                                                         <label for="edit-message">
 																															 Click to edit Message!
 																												</label>
+
                                                     </div>
+                                                    <div class="character-count">
+                                                        <span class="character-count-current"></span> <span class="character-count-max">(175)</span>
+                                                    </div>
+                                                    <p class="message_sent"></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -670,7 +676,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send Message</button>
+                    <button type="button" class="btn btn-primary send_message">Send Message</button>
                 </div>
             </div>
         </div>
@@ -738,6 +744,7 @@
             </div>
         </div>
     </div>
+    <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- Jquery Core Js -->
     <script src="assets/bundles/libscripts.bundle.js"></script>
