@@ -262,8 +262,8 @@ function getCar(car) {
         '<button id="learn-more" data-toggle="modal" data-target="" class="learn-more" type="button">' +
         '<div class="circle">' +
         '<span class="icon arrow"></span>' +
-        ' </div>' +
-        ' <a href="/corolla" class="button-text">Learn More</a>' +
+        '</div>' +
+        '<a href="/corolla" class="button-text">Learn More</a>' +
         '</button>' +
         '</div>' +
         '<button type="button" class="btn btn-primary sign_up button-click" data-toggle="modal" data-target="#ownItForm" data-dismiss="modal">sign up</button>' +

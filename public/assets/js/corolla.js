@@ -49,6 +49,7 @@ function getCar(car) {
         `<p class="card-text car-text">${car.make} ${car.model} ${car.year}</p>` +
         `<p class="card-text car-text-details"> <span>Weekly payment:</span> N ${car.weeklypayment} </p>` +
         `<p class="card-text car-text-details"> <span>Down payment:</span> N ${car.downpayment}</p>` +
+        `<p class="card-text car-text"><span>Number of weeks:</span> 104 </p>` +
         '</div>')
     $('.product-images').slick('slickAdd', newCar)
 

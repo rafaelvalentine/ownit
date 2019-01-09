@@ -156,28 +156,20 @@ Car Details
     margin: 0 0 30px;
 }
 
-
-/* #car-details .product-detail small {
-    font-size: 100%;
-} */
+#car-details #car-brief .downpayment {
+    font-weight: 700;
+}
 
 .image-imitation {
     background-color: #fff;
     text-align: center;
     padding: 0;
-    /* background-color: #cccccc; */
     height: 400px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 75%;
     position: relative;
 }
-
-
-/* .product-images {
-    width: 100%;
-    height: 80vh;
-} */
 
 .product-images img {
     width: 100%;
@@ -187,9 +179,8 @@ Car Details
 #car-details .btn-ownit {
     background-color: #056340;
     border-color: #056340;
-    margin-top: 30px;
     border-radius: 20px;
-    width: 100px;
+    width: 100%;
 }
 
 #car-details .btn-ownit:hover {
@@ -198,8 +189,6 @@ Car Details
 }
 
 .product-images-shower {
-    /* margin: 20px 0; */
-    /* max-width: 100%; */
     height: 200px;
     display: none;
 }
@@ -210,12 +199,11 @@ Car Details
 
 .product-images-shower .img-small {
     width: 100%;
-    height: 150px;
-    /* margin: 0 10px; */
+    height: 180px;
+    margin: 0px 0px;
 }
 
 .full_details-top {
-    /* background-color: #fbae30; */
     color: #fff;
     padding: 15px;
     margin-bottom: -10px;
@@ -356,7 +344,7 @@ Car Details
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: capitalize;
-    /* margin-top: 40px; */
+    margin-top: 10px;
 }
 
 
@@ -498,6 +486,12 @@ Car Details
     justify-content: center;
 }
 
+.footer div span a {
+    text-decoration: none;
+    color: #056340;
+    font-weight: 700;
+}
+
 
 /* 
 ==========================================================================
@@ -572,6 +566,27 @@ Car Details
 @media screen and (min-width: 700px) and (max-width:1023px) {
     /* 
 	  ==========================================================================
+   Car Details
+	  ========================================================================== 
+   */
+    .image-imitation {
+        background-color: #fff;
+        text-align: center;
+        padding: 0;
+        /* background-color: #cccccc; */
+        height: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+    }
+    .product-images-shower {
+        height: 200px;
+        display: block;
+        margin: 30px 0 10px;
+    }
+    /* 
+	  ==========================================================================
  		 Contact
 	  ========================================================================== 
 	*/
@@ -601,6 +616,11 @@ Car Details
         display: flex;
         justify-content: flex-end;
     }
+    .footer div span a {
+        text-decoration: none;
+        color: #056340;
+        font-weight: 700;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -614,168 +634,56 @@ Car Details
         margin-left: 0px;
         padding: 0;
     }
-    /* 
-	  ==========================================================================
-   	Banner
-	  ========================================================================== 
-   */
-    .banner {
-        padding-bottom: 6rem;
-        background-color: rgba(22, 99, 5, 1);
-        content: "";
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-image: url("../img/OWNiT.png");
-        background-position: right bottom;
-        background-attachment: fixed;
-        /* min-height: 90vh; */
-        /* padding-top: 5rem; */
-    }
-    /* 
-	  ==========================================================================
-   	Navigation
-	  ========================================================================== 
-   */
     .ownit_header .nav-item {
         margin: 0 10px;
     }
     /* 
 	  ==========================================================================
-   	Bannner
-  	========================================================================== 
-	*/
-    .banner {
-        padding-bottom: 0;
-        background-color: rgba(22, 99, 5, 1);
-    }
-    .banner .banner--container {
+   Car Details
+	  ========================================================================== 
+   */
+    #car-details #car-brief {
         display: flex;
-        justify-content: center;
-        flex-direction: row;
-        background-color: rgba(22, 99, 5, .75);
-        /* height: 90vh; */
+        justify-content: space-between;
     }
-    .banner .jumbotron {
-        align-self: center;
-        padding: 3rem;
-        margin-bottom: 0;
-        background-color: rgba(22, 99, 5, .2);
-        border-radius: .3rem;
-        margin-top: 0;
+    #car-details #car-brief .btn-ownit {
+        margin: 20px 0 0;
+        width: 150px;
     }
-    .banner .card .three {
-        display: inline;
-        height: 100%;
-        /*width: 100%; */
-    }
-    .banner .card .one,
-    .banner .card .two {
-        display: none;
-    }
-    /* 
-	  ==========================================================================
-  		Drive2Own How it works 
-   	========================================================================== 
-	*/
-    .how_it_works .card {
-        margin: .5rem .5rem 2.5rem;
-        padding: 3rem 0 5rem;
-        border-radius: 10px;
-        width: 100% !important;
-        position: relative;
-        border: 1px solid rgba(80, 175, 21, .25);
-    }
-    .how_it_works .card-body .card-img-top {
-        width: 50px;
-        height: 50px;
-        display: block;
-        margin: 0 auto 10px;
-        position: absolute;
-        top: -25px;
-        left: 40%;
-    }
-    /* 
-	  ==========================================================================
-  	Work2Own
-   	========================================================================== 
-	*/
-    #work2own_actual .card-img-top {
-        width: 100%;
-        height: 120px;
-    }
-    /* 
-	  ==========================================================================
-   	Partners
-  	========================================================================== 
-	 */
-    .partners {
-        background-color: rgba(22, 99, 5, .15);
-        display: flex;
-        justify-content: center;
-    }
-    .partners .carousel-item img {
-        width: 100%;
-        height: 150px;
-    }
-    /* 
-	  ==========================================================================
-  		Drive2Own 
-   	========================================================================== 
-	*/
-    #drive2ownslider .col-lg-10 {
-        -ms-flex: 0 0 83.333333%;
-        flex: 0 0 83.333333%;
-        max-width: 96.333333%;
-        padding-right: 15px;
-        padding-left: 70px;
-    }
-    #drive2ownslider .card-img-top {
-        width: 100%;
-        height: 200px;
-    }
-    /* 
-	  ==========================================================================
-  		Drive2Own Benefits
-   	========================================================================== 
-	*/
-    .drive2own-benefits .col-lg-3 {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 50%;
-        max-width: 23%;
-    }
-    /* 
-		==========================================================================
-  	Products
-   	========================================================================== 
-	  */
-    .products .row {
-        flex-direction: row;
-        justify-content: center;
-        padding: 2rem 0 1rem;
-    }
-    .products .card {
-        margin: .5rem 10px;
-        padding: 2rem 0 2rem;
-        border-radius: 10px;
-        width: 30% !important;
-    }
-    #drive2OWN_actual button {
-        margin-top: 70px;
-    }
-    /* 
-		==========================================================================
-  	Register
-		========================================================================== 
-		*/
-    .register {
-        content: "";
+    .image-imitation {
+        background-color: #fff;
+        text-align: center;
+        padding: 0;
+        height: 90vh;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        background-image: url("../img/OWNiT.png");
-        background-position: right bottom;
-        background-attachment: fixed;
+        position: relative;
     }
-    /* 
+    .product-images-shower {
+        height: 200px;
+        display: block;
+        margin: 30px 0 10px;
+    }
+    .full_details-middle {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .how-it-works-row {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    #car-details .how-it-works-row .card {
+        margin: 10px;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    #car-details .how-it-works-row .card img {
+        margin-left: 20px;
+    }
+    /*
 		==========================================================================
  		 Contact
 		========================================================================== 
@@ -799,12 +707,6 @@ Car Details
     }
     /* 
 ==========================================================================
-  Footer
-========================================================================== 
-
-*/
-    /* 
-==========================================================================
    Footer
 ========================================================================== 
 */
@@ -817,16 +719,4 @@ Car Details
         color: #056340;
         font-weight: 700;
     }
-    /* footer {
-        border-top: .5px solid rgba(135, 150, 163, .4);
-        padding-top: 13px;
-    }
-    footer .container {
-        display: flex;
-        justify-content: flex-start;
-    }
-    footer p {
-        font-size: 12px;
-        color: #566374;
-    } */
 }
