@@ -119,13 +119,7 @@ $(document).ready(function() {
         })
 })
 
-/**
- *Gets data from socet.io
- */
-const socket = io();
-socket.on('smsStatus', function(data) {
-    $('.message_sent').text(' text message sent to ' + data.number)
-})
+
 
 $('#table').on('click', '.enter_message', function() {
     const currectUser = $(this).closest('tr')
@@ -237,7 +231,9 @@ function getUser(user) {
     newUser.data('car', user.car)
     $('#table').append(newUser)
 }
-
+/**
+ * Formats car.Image for proper 
+ */
 function changeupload(upload) {
     return upload.split('').map(a => a === '\\' ? '/' : a).join('')
 }
@@ -267,7 +263,7 @@ function getCar(car) {
         '<div class="circle">' +
         '<span class="icon arrow"></span>' +
         ' </div>' +
-        ' <p class="button-text">Learn More</p>' +
+        ' <a href="/corolla" class="button-text">Learn More</a>' +
         '</button>' +
         '</div>' +
         '<button type="button" class="btn btn-primary sign_up button-click" data-toggle="modal" data-target="#ownItForm" data-dismiss="modal">sign up</button>' +
@@ -277,7 +273,6 @@ function getCar(car) {
         '</div>' +
         '</div>' +
         ' </div>')
-
     $('.slick_demo_2').slick('slickAdd', newCar)
 }
 const addUser = (event) => {
@@ -356,3 +351,10 @@ function deleteUser(user) {
 function timedRefresh(timeoutPeriod) {
     setTimeout('location.reload(true);', timeoutPeriod)
 }
+/**
+ *Gets data from socet.io
+ */
+const socket = io();
+socket.on('smsStatus', function(data) {
+    $('.message_sent').text(' text message sent to ' + data.number)
+})

@@ -1,0 +1,832 @@
+/* 
+==========================================================================
+	 General
+========================================================================== 
+*/
+
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+body,
+#main {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 35px;
+}
+
+p,
+a {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-transform: none;
+    text-decoration: none;
+}
+
+.display-none {
+    display: none;
+}
+
+
+/* 
+==========================================================================
+   Body 
+========================================================================== 
+*/
+
+body,
+#main {
+    background-color: #fff;
+}
+
+
+/* 
+==========================================================================
+   Navigation
+========================================================================== 
+*/
+
+.corolla_header button {
+    border: none;
+}
+
+.corolla_header button:focus {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("../img/menu.svg") !important;
+}
+
+.corolla_header .navbar-brand img {
+    width: 150px;
+    height: 50px;
+}
+
+.corolla_header .nav-link {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0;
+}
+
+.corolla_header .nav-link:hover {
+    color: #fbae30 !important;
+}
+
+.corolla_header .navbar-nav .nav-item.activez a {
+    color: #056340 !important;
+}
+
+#corolla_header .dashboard-btn {
+    border-radius: 20px !important;
+    background-color: #fbae30 !important;
+    border-color: #fbae30 !important;
+    color: #fff;
+    width: 100px;
+    font-style: inherit;
+    font-weight: 700;
+}
+
+#corolla_header .dashboard-btn:hover {
+    background-color: #fff !important;
+    border: 1px solid#fbae30 !important;
+    color: #fbae30;
+}
+
+
+/* 
+==========================================================================
+  CarInfo
+========================================================================== 
+*/
+
+#carinfo .wrapper .breadcrumb li {
+    margin: 0 2px;
+}
+
+#carinfo .wrapper .breadcrumb li.active {
+    margin-top: 4px;
+}
+
+#carinfo h2 {
+    font-weight: 500;
+}
+
+
+/* 
+==========================================================================
+Car Details
+========================================================================== 
+*/
+
+#car-details {
+    font-size: 1rem;
+}
+
+#car-details.wrapper-content {
+    padding: 20px 10px 0;
+}
+
+.image-container {
+    margin: 0 0 30px;
+}
+
+
+/* #car-details .product-detail small {
+    font-size: 100%;
+} */
+
+.image-imitation {
+    background-color: #fff;
+    text-align: center;
+    padding: 0;
+    /* background-color: #cccccc; */
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
+    position: relative;
+}
+
+
+/* .product-images {
+    width: 100%;
+    height: 80vh;
+} */
+
+.product-images img {
+    width: 100%;
+    height: 100%;
+}
+
+#car-details .btn-ownit {
+    background-color: #056340;
+    border-color: #056340;
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 100px;
+}
+
+#car-details .btn-ownit:hover {
+    background-color: #008152;
+    border-color: #008152;
+}
+
+.product-images-shower {
+    /* margin: 20px 0; */
+    /* max-width: 100%; */
+    height: 200px;
+    display: none;
+}
+
+.product-images-shower .div-img-small {
+    margin: 0 10px;
+}
+
+.product-images-shower .img-small {
+    width: 100%;
+    height: 150px;
+    /* margin: 0 10px; */
+}
+
+.full_details-top {
+    /* background-color: #fbae30; */
+    color: #fff;
+    padding: 15px;
+    margin-bottom: -10px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9a113+0,f49911+12,f4980e+16,f99d09+23,f79f11+41,f9a011+52,f79f11+71,f79f11+84,f4ba61+100 */
+    background: #f9a113;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #f9a113 0%, #f49911 12%, #f4980e 16%, #f99d09 23%, #f79f11 41%, #f9a011 52%, #f79f11 71%, #f79f11 84%, #f4ba61 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #f9a113 0%, #f49911 12%, #f4980e 16%, #f99d09 23%, #f79f11 41%, #f9a011 52%, #f79f11 71%, #f79f11 84%, #f4ba61 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #f9a113 0%, #f49911 12%, #f4980e 16%, #f99d09 23%, #f79f11 41%, #f9a011 52%, #f79f11 71%, #f79f11 84%, #f4ba61 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f9a113', endColorstr='#f4ba61', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+.full_details-top h2,
+.full_details-top p {
+    font-weight: 600;
+}
+
+.full_details-middle {
+    /* display: none; */
+    background-color: #f5f5f5;
+    margin-bottom: -20px;
+    padding: 15px;
+    color: #000;
+}
+
+.full_details-bottom {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+    /* background-color: #fbae30; */
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    padding: 0 20px 20px;
+    color: #fff;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9a113+0,f49911+12,f4980e+16,f99d09+23,f79f11+41,f9a011+52,f79f11+71,f79f11+84,f4ba61+100 */
+    background: #f9a113;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #f9a113 0%, #f49911 12%, #f4980e 16%, #f99d09 23%, #f79f11 41%, #f9a011 52%, #f79f11 71%, #f79f11 84%, #f4ba61 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #f9a113 0%, #f49911 12%, #f4980e 16%, #f99d09 23%, #f79f11 41%, #f9a011 52%, #f79f11 71%, #f79f11 84%, #f4ba61 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #f9a113 0%, #f49911 12%, #f4980e 16%, #f99d09 23%, #f79f11 41%, #f9a011 52%, #f79f11 71%, #f79f11 84%, #f4ba61 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f9a113', endColorstr='#f4ba61', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+.full_details-bottom hr {
+    border: 1px solid #fff;
+}
+
+.full_details-bottom p {
+    text-align: center;
+    margin: 5px;
+}
+
+.full_details-bottom p i {
+    margin: 10px;
+}
+
+#car-details .how-it-works {
+    margin-bottom: 20px;
+    color: rgba(5, 39, 99, .9);
+    font-weight: 600;
+}
+
+#car-details .card {
+    margin-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: .5px solid #056340; */
+    border: transparent;
+    background-color: rgba(5, 39, 99, .05);
+}
+
+#car-details .card img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+#car-details .card h3 {
+    color: #056340;
+}
+
+#car-details .card h2 {
+    color: #ffa10a;
+}
+
+#car-details .card span {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #000;
+}
+
+#car-details #payment .card-text span {
+    background-image: url('../img/checked2.svg');
+    /* text-align: center; */
+    padding: 8px;
+    margin-right: 5px;
+    /* background-color: #cccccc; */
+    /* width: 30px;
+    height: 30px; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+#car-details #payment a {
+    color: #056340;
+    text-decoration: none;
+}
+
+#car-details #payment a:hover {
+    text-decoration: #056340;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #056340 !important;
+}
+
+.card .image-imitation {
+    background-color: transparent;
+    border: transparent;
+}
+
+.car-text {
+    color: #056340;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    /* margin-top: 40px; */
+}
+
+
+/* .image-imitation-div2 {
+    position: relative;
+} */
+
+
+/* .car-text-div {
+    position: absolute;
+    bottom: 0;
+} */
+
+#choose-other-cars .slick-prev:before {
+    display: none
+}
+
+#choose-other-cars .slick-prev:before,
+#choose-other-cars .slick-next:before {
+    color: #ffa10a !important;
+}
+
+#choose-other-cars .slick-prev:before,
+#choose-other-cars .slick-next:before {
+    font-family: slick;
+    font-size: 35px;
+    line-height: 1;
+    opacity: 0.75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* 
+==========================================================================
+  Contact
+========================================================================== 
+*/
+
+.contact {
+    padding: 0 0 10px;
+    color: #566374;
+}
+
+.contact p {
+    font-weight: 400;
+    font: 14px !important;
+}
+
+.contact .contact__links--div,
+.contact .contact__info {
+    margin: 30px 0;
+}
+
+.contact .contact__links .nav-link {
+    margin: 0 10px;
+    text-transform: capitalize;
+    color: #566374 !important;
+}
+
+.contact__info--header {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.contact .contact__social--div h4,
+.contact .contact__links--div h4 {
+    margin-left: 10px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.contact .contact__social {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.facebook {
+    background-image: url("../img/facebook.svg") !important;
+}
+
+.facebook:hover {
+    background-image: url("../img/facebook-hover.svg") !important;
+}
+
+.instagram {
+    background-image: url("../img/instagram.svg") !important;
+}
+
+.instagram:hover {
+    background-image: url("../img/instagram-hover.svg") !important;
+}
+
+.twitter {
+    background-image: url("../img/twitter.svg") !important;
+}
+
+.twitter:hover {
+    background-image: url("../img/twitter-hover.svg") !important;
+}
+
+.linkedin {
+    background-image: url("../img/linkedin.svg") !important;
+}
+
+.linkedin:hover {
+    background-image: url("../img/linkedin-hover.svg") !important;
+}
+
+.contact__social .contact-toggler-icon {
+    margin: 0 10px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+
+
+/* 
+==========================================================================
+   Footer
+========================================================================== 
+*/
+
+.footer {
+    background: none repeat scroll 0 0 white;
+    border-top: 1px solid #e7eaec;
+    bottom: 0;
+    left: 0;
+    padding: 10px 20px 20px;
+    position: relative;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* 
+==========================================================================
+  Modal
+========================================================================== 
+*/
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal .modal-title {
+    text-transform: uppercase;
+    text-align: center !important;
+}
+
+.modal img {
+    width: 150px;
+    height: 70px;
+}
+
+#drive2OWN .modal-content .modal-header img {
+    width: 150px;
+    height: 80px;
+}
+
+.car-title {
+    margin: 10px;
+}
+
+.modal .btn-primary {
+    background-color: rgba(22, 99, 5, .85);
+    border-color: rgba(22, 99, 5, .85);
+    height: 40px;
+}
+
+.modal .btn-primary:hover {
+    background-color: #fff;
+    border-color: rgba(22, 99, 5, .85);
+    color: rgba(22, 99, 5, .85);
+    height: 40px;
+}
+
+.modal .btn-secondary {
+    background-color: rgba(5, 39, 99, .75);
+    border-color: rgba(5, 39, 99, .35);
+    height: 40px;
+}
+
+.modal label.error {
+    color: red;
+}
+
+#thanksModal {
+    display: none;
+}
+
+#thanksModal .thanks-body__img {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+}
+
+#thanksModal button {
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 700px) and (max-width:1023px) {
+    /* 
+	  ==========================================================================
+ 		 Contact
+	  ========================================================================== 
+	*/
+    .contact--container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly !important;
+    }
+    .contact .contact__links .nav-link {
+        margin: -10px 10px 0;
+        text-transform: capitalize;
+        color: #566374 !important;
+    }
+    .contact__info .address,
+    .contact__info .number {
+        display: block;
+    }
+    .contact__social--div {
+        margin-top: 25px;
+    }
+    /* 
+==========================================================================
+   Footer
+========================================================================== 
+*/
+    .footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* 
+		==========================================================================
+   Navigation
+  	========================================================================== 
+    */
+    a#dashboard-a {
+        margin: -8px 0 0;
+        margin-left: 0px;
+        padding: 0;
+    }
+    /* 
+	  ==========================================================================
+   	Banner
+	  ========================================================================== 
+   */
+    .banner {
+        padding-bottom: 6rem;
+        background-color: rgba(22, 99, 5, 1);
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-image: url("../img/OWNiT.png");
+        background-position: right bottom;
+        background-attachment: fixed;
+        /* min-height: 90vh; */
+        /* padding-top: 5rem; */
+    }
+    /* 
+	  ==========================================================================
+   	Navigation
+	  ========================================================================== 
+   */
+    .ownit_header .nav-item {
+        margin: 0 10px;
+    }
+    /* 
+	  ==========================================================================
+   	Bannner
+  	========================================================================== 
+	*/
+    .banner {
+        padding-bottom: 0;
+        background-color: rgba(22, 99, 5, 1);
+    }
+    .banner .banner--container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        background-color: rgba(22, 99, 5, .75);
+        /* height: 90vh; */
+    }
+    .banner .jumbotron {
+        align-self: center;
+        padding: 3rem;
+        margin-bottom: 0;
+        background-color: rgba(22, 99, 5, .2);
+        border-radius: .3rem;
+        margin-top: 0;
+    }
+    .banner .card .three {
+        display: inline;
+        height: 100%;
+        /*width: 100%; */
+    }
+    .banner .card .one,
+    .banner .card .two {
+        display: none;
+    }
+    /* 
+	  ==========================================================================
+  		Drive2Own How it works 
+   	========================================================================== 
+	*/
+    .how_it_works .card {
+        margin: .5rem .5rem 2.5rem;
+        padding: 3rem 0 5rem;
+        border-radius: 10px;
+        width: 100% !important;
+        position: relative;
+        border: 1px solid rgba(80, 175, 21, .25);
+    }
+    .how_it_works .card-body .card-img-top {
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin: 0 auto 10px;
+        position: absolute;
+        top: -25px;
+        left: 40%;
+    }
+    /* 
+	  ==========================================================================
+  	Work2Own
+   	========================================================================== 
+	*/
+    #work2own_actual .card-img-top {
+        width: 100%;
+        height: 120px;
+    }
+    /* 
+	  ==========================================================================
+   	Partners
+  	========================================================================== 
+	 */
+    .partners {
+        background-color: rgba(22, 99, 5, .15);
+        display: flex;
+        justify-content: center;
+    }
+    .partners .carousel-item img {
+        width: 100%;
+        height: 150px;
+    }
+    /* 
+	  ==========================================================================
+  		Drive2Own 
+   	========================================================================== 
+	*/
+    #drive2ownslider .col-lg-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 96.333333%;
+        padding-right: 15px;
+        padding-left: 70px;
+    }
+    #drive2ownslider .card-img-top {
+        width: 100%;
+        height: 200px;
+    }
+    /* 
+	  ==========================================================================
+  		Drive2Own Benefits
+   	========================================================================== 
+	*/
+    .drive2own-benefits .col-lg-3 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 50%;
+        max-width: 23%;
+    }
+    /* 
+		==========================================================================
+  	Products
+   	========================================================================== 
+	  */
+    .products .row {
+        flex-direction: row;
+        justify-content: center;
+        padding: 2rem 0 1rem;
+    }
+    .products .card {
+        margin: .5rem 10px;
+        padding: 2rem 0 2rem;
+        border-radius: 10px;
+        width: 30% !important;
+    }
+    #drive2OWN_actual button {
+        margin-top: 70px;
+    }
+    /* 
+		==========================================================================
+  	Register
+		========================================================================== 
+		*/
+    .register {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-image: url("../img/OWNiT.png");
+        background-position: right bottom;
+        background-attachment: fixed;
+    }
+    /* 
+		==========================================================================
+ 		 Contact
+		========================================================================== 
+		*/
+    .contact--container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between !important;
+    }
+    .contact .contact__links .nav-link {
+        margin: -10px 10px 0;
+        text-transform: capitalize;
+        color: #566374 !important;
+    }
+    .contact__info .address,
+    .contact__info .number {
+        display: block;
+    }
+    .contact__social--div {
+        margin-top: 25px;
+    }
+    /* 
+==========================================================================
+  Footer
+========================================================================== 
+
+*/
+    /* 
+==========================================================================
+   Footer
+========================================================================== 
+*/
+    .footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .footer div span a {
+        text-decoration: none;
+        color: #056340;
+        font-weight: 700;
+    }
+    /* footer {
+        border-top: .5px solid rgba(135, 150, 163, .4);
+        padding-top: 13px;
+    }
+    footer .container {
+        display: flex;
+        justify-content: flex-start;
+    }
+    footer p {
+        font-size: 12px;
+        color: #566374;
+    } */
+}

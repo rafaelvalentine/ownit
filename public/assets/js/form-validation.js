@@ -31,7 +31,7 @@ $(document).ready(function() {
                 minlength: 'Last Name cannot not be less than 3 characters!',
                 maxlength: 'Last Name cannot not be more than 25 characters!'
             }
-        },
+        }
         // submitHandler: function() {
         //     form.submit(addUser)
         // }

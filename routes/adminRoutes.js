@@ -71,9 +71,15 @@ router.route('/register')
 
 // GET for logout logout
 router.get('/logout', (req, res) => {
-    req.logOut();
-    console.log('you are logged out')
-    res.redirect('/login')
-})
-
+        req.logOut();
+        console.log('you are logged out')
+        res.redirect('/login')
+    })
+    /**
+     * get car details from landing page
+     */
+router.route('/corolla')
+    .get((req, res) => {
+        res.sendFile(path.join(__dirname, '../views', 'corolla.html'))
+    })
 module.exports = router
