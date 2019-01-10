@@ -107,7 +107,7 @@ body,
     background-color: #fbae30 !important;
     border-color: #fbae30 !important;
     color: #fff;
-    width: 100px;
+    width: 100%;
     font-style: inherit;
     font-weight: 700;
 }
@@ -171,6 +171,24 @@ Car Details
     position: relative;
 }
 
+.image-imitation-two {
+    background-color: #fff;
+    text-align: center;
+    padding: 0;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
+    position: relative;
+    /* margin-bottom: -30px; */
+}
+
+.image-imitation-two-text {
+    background: #fff;
+    margin: -45px 0 0;
+    padding: 20px;
+}
+
 .product-images img {
     width: 100%;
     height: 100%;
@@ -189,7 +207,6 @@ Car Details
 }
 
 .product-images-shower {
-    height: 200px;
     display: none;
 }
 
@@ -199,7 +216,7 @@ Car Details
 
 .product-images-shower .img-small {
     width: 100%;
-    height: 180px;
+    height: 100%;
     margin: 0px 0px;
 }
 
@@ -234,6 +251,7 @@ Car Details
 }
 
 .full_details-bottom {
+    font-weight: 300;
     /* display: flex;
     flex-direction: row;
     justify-content: center; */
@@ -263,6 +281,7 @@ Car Details
 .full_details-bottom p {
     text-align: center;
     margin: 5px;
+    font-weight: 100;
 }
 
 .full_details-bottom p i {
@@ -568,6 +587,16 @@ Car Details
 	  ==========================================================================
    Car Details
 	  ========================================================================== 
+	 */
+    a#dashboard-a {
+        margin: 0 auto;
+        margin-left: 0px;
+        padding: 0;
+    }
+    /* 
+	  ==========================================================================
+   Car Details
+	  ========================================================================== 
    */
     .image-imitation {
         background-color: #fff;
@@ -579,6 +608,22 @@ Car Details
         background-repeat: no-repeat;
         background-size: 100% 100%;
         position: relative;
+    }
+    .image-imitation-two {
+        background-color: #fff;
+        text-align: center;
+        padding: 0;
+        height: 300px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 75%;
+        position: relative;
+        margin: 0 10px 0;
+    }
+    .image-imitation-two-text {
+        background: #fff;
+        margin: -35px 10px 0;
+        padding: 20px;
     }
     .product-images-shower {
         height: 200px;
@@ -633,6 +678,7 @@ Car Details
         margin: -8px 0 0;
         margin-left: 0px;
         padding: 0;
+        width: 120px;
     }
     .ownit_header .nav-item {
         margin: 0 10px;
@@ -650,18 +696,25 @@ Car Details
         margin: 20px 0 0;
         width: 150px;
     }
+    #car-details .image-container-row {
+        justify-content: center;
+    }
+    #car-details .image-container-div {
+        height: 100vh;
+        margin-bottom: 30px;
+    }
     .image-imitation {
         background-color: #fff;
         text-align: center;
         padding: 0;
-        height: 90vh;
+        height: 560px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         position: relative;
     }
     .product-images-shower {
-        height: 200px;
+        height: 100%;
         display: block;
         margin: 30px 0 10px;
     }
@@ -682,6 +735,26 @@ Car Details
     }
     #car-details .how-it-works-row .card img {
         margin-left: 20px;
+    }
+    .image-imitation-two {
+        background-color: #fff;
+        text-align: center;
+        padding: 0;
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        margin: 0 50px;
+        /* margin-bottom: -30px; */
+    }
+    .image-imitation-two-text {
+        background: #fff;
+        margin: 0 50px 0;
+        padding: 20px;
+    }
+    .display-none {
+        display: none;
     }
     /*
 		==========================================================================

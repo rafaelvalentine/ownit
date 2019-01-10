@@ -109,7 +109,7 @@ body,
     background-color: #fbae30 !important;
     border-color: #fbae30 !important;
     color: #fff;
-    width: 100px;
+    width: 100%;
     font-style: inherit;
     font-weight: 700;
 }
@@ -918,6 +918,12 @@ footer p {
         margin-left: -5px;
         padding: 0;
     }
+    /* a#dashboard-a {
+        margin: -8px 0 0;
+        margin-left: 0px;
+        padding: 0;
+        width: 120px;
+    } */
     /* 
 		==========================================================================
    	Bannner
@@ -1090,6 +1096,12 @@ footer p {
         margin: -8px 0 0;
         margin-left: 0px;
         padding: 0;
+    }
+    a#dashboard-a {
+        margin: -8px 0 0;
+        margin-left: 0px;
+        padding: 0;
+        width: 120px;
     }
     /* 
 	  ==========================================================================
