@@ -124,15 +124,17 @@ const carInfo = [{
         }
     ]
     /**
-     * toggle middle display to block
+     * toggle middle to display
      */
 $('#full_details-bottom').click(() => {
     if ($('#show-icon').hasClass('fa-plus')) {
         $('#show-icon').toggleClass('fa-plus')
         $('#show-icon').addClass('fa-minus')
+        $('#show-hide').text('Hide')
     } else {
         $('#show-icon').removeClass('fa-minus')
         $('#show-icon').addClass('fa-plus')
+        $('#show-hide').text('Show')
     }
     $('#full_details-middle ').toggleClass('display-none')
 })
