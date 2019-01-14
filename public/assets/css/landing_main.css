@@ -858,6 +858,11 @@ footer p {
     color: #566374;
 }
 
+footer p strong {
+    font-size: 12px;
+    color: #056340;
+}
+
 
 /* 
 ==========================================================================
@@ -1558,7 +1563,7 @@ button#learn-more:hover .button-text {
 } */
 
 #slick_demo_2 .car-card .wrapper {
-    background: 15% 1% / cover no-repeat;
+    background: center / 100% 100% no-repeat;
 }
 
 #slick_demo_2 .car-card .date {

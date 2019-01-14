@@ -5,6 +5,7 @@ $(document).ready(function() {
 
     $.getJSON('/api/cars')
         .then(getCars)
+        // getCars(carInfo)
 })
 
 /**
@@ -14,6 +15,19 @@ const getCars = (cars) => {
     // add users to page
     cars.map((car) => {
         getCar(car)
+    })
+
+    /**
+     *Select a new car model to display
+     */
+
+    $('#select-product-images').on('click', '.selected', function() {
+        $('html, body').animate({
+            scrollTop: $("#car-details").offset().top
+        }, 2000);
+        const currectCar = $(this).find('p')
+        let text = currectCar.text()
+        console.log('click!!!', text)
     })
 }
 
@@ -44,13 +58,14 @@ function getCar(car) {
         '</div>' +
         '</div>')
     let newCar2 = $('<div>' +
+        '<div class="selected" ">' +
         `<div style="${style}" class="image-imitation image-imitation-two">` +
         '</div>' +
         '<div class="image-imitation-two-text">' +
         `<p class="card-text car-text">${car.make} ${car.model} ${car.year}</p>` +
         `<p class="card-text car-text-details"> <span>Weekly payment:</span> N ${car.weeklypayment} </p>` +
-        `<p class="card-text car-text-details"> <span>Down payment:</span> N ${car.downpayment}</p>` +
-        `<p class="card-text car-text"><span>Number of weeks:</span> 104 </p>` +
+        '</div>' +
+        // '</a>' +
         '</div>' +
         '</div>')
     $('.product-images').slick('slickAdd', newCar)
@@ -67,9 +82,9 @@ const carInfo = [{
             'model': 'corolla',
             'year': '2005',
             'downpayment': '100,000',
-            'carImage1': '',
-            'carImage2': '',
-            'carImage3': '',
+            'carImage1': 'assets/img/cars/toyota-corolla-frontview-2005.jpg',
+            'carImage2': 'assets/img/cars/toyota-corolla-sideview-2005.jpg',
+            'carImage3': 'assets/img/cars/toyota-corolla-rearview-2005.jpg',
             'weeklypayment': '25,000'
         },
         {

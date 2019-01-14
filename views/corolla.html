@@ -112,7 +112,7 @@
                                 <div class="row image-container-row">
                                     <div class="image-container-div col-xs-12 col-md-12 col-lg-10">
 
-                                        <div class="col-lg-12 image-container">
+                                        <div class="col-xs-12col-md-12 col-lg-12 image-container">
                                             <div class="product-images">
 
                                             </div>
@@ -262,12 +262,12 @@
 																				</div> -->
                                         <div class="container choose-other-cars-container">
                                             <div class="row choose-other-cars-row">
-                                                <div id="choose-other-cars" class="card col-lg-8">
+                                                <div id="choose-other-cars" class="card col-lg-12">
                                                     <div class="card-body">
                                                         <h2 class="card-title">Cars available within Corolla Package <small>ex. VAT</small> </h2>
-                                                        <h5 class="card-title">Widest range of vehicles and our most popular option.</h5>
+                                                        <h4 class="card-title">Widest range of vehicles and our most popular option.</h4>
                                                         <div class="image-container second">
-                                                            <div class="select-product-images">
+                                                            <div id="select-product-images" class="select-product-images">
 
                                                             </div>
 
@@ -450,6 +450,7 @@
             </div>
         </div>
     </div>
+    <script src="assets/js/smoothScroll.js"></script>
     <script src="assets/plugins/popper.min.js "></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
     <!-- Mainly scripts -->
@@ -526,7 +527,7 @@
         });
         $('.select-product-images').slick({
             infinite: true,
-            slidesToShow: 1,
+            slidesToShow: 3,
             slidesToScroll: 1,
             // centerMode: true,
             autoplay: false,
@@ -537,7 +538,7 @@
                     slidesToScroll: 3,
                     infinite: false,
                     dots: true,
-                    centerMode: false
+                    // centerMode: true
                 }
             }, {
                 breakpoint: 800,
